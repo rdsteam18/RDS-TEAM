@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Divisions | RDS TEAM Ecosystem</title>
+  <meta name="description" content="Explore RDS TEAM's four core divisions: RDS Group (Retail), RDS Technology (Products & Services), RDS Media (Entertainment), HRF Group (Training & Discipline).">
+  <meta name="keywords" content="RDS Group, RDS Technology, RDS Media, HRF Group, OKmart, ToolTari, OMDEV, training">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="RDS TEAM Divisions — Complete Ecosystem Breakdown">
+  <meta property="og:description" content="Discover how RDS Group, Technology, Media, and HRF Group power the future ecosystem.">
+  <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png">
+  <meta property="og:url" content="https://rdsteam.netlify.app/divisions">
+  
+  <link rel="canonical" href="https://rdsteam.netlify.app/divisions">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #05070A;
+      color: #EDF2FF;
+      overflow-x: hidden;
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0A0F1A; }
+    ::-webkit-scrollbar-thumb { background: #2A6DF0; border-radius: 10px; }
+    
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    
+    .glass-card {
+      background: rgba(10, 20, 35, 0.55);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(42, 109, 240, 0.2);
+      border-radius: 32px;
+      transition: all 0.4s ease;
+    }
+    .glass-card:hover {
+      border-color: rgba(42, 109, 240, 0.6);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 35px -15px rgba(42, 109, 240, 0.3);
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #2A6DF0, #8B5CF6);
+      padding: 12px 32px;
+      border-radius: 40px;
+      font-weight: 600;
+      color: white;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(42, 109, 240, 0.3);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: none;
+    }
+    .btn-primary:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 28px rgba(42, 109, 240, 0.5);
+    }
+    
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      background: rgba(5, 7, 10, 0.75);
+      border-bottom: 1px solid rgba(42, 109, 240, 0.2);
+    }
+    
+    .division-hero {
+      background: radial-gradient(ellipse at 30% 40%, rgba(42,109,240,0.15), transparent);
+    }
+    
+    .expandable-card {
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .expandable-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+    .expandable-card.active .expandable-content {
+      max-height: 500px;
+    }
+    .tech-grid, .media-grid, .hrf-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .sub-item {
+      background: rgba(255,255,255,0.05);
+      padding: 8px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; }
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: block; }
+    }
+    .mobile-menu-btn { display: none; font-size: 1.8rem; cursor: pointer; }
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #2A6DF0;
+      text-decoration: none;
+      margin-bottom: 24px;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .back-link:hover { gap: 12px; color: #8B5CF6; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 16px 24px;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png" alt="Logo" style="height: 38px;">
+      <span style="font-weight: 800; font-size: 1.3rem;">RDS TEAM</span>
+    </div>
+    <div class="nav-links" style="display: flex; gap: 32px;">
+      <a href="#" style="color: #D1D9FF; text-decoration: none;">Home</a>
+      <a href="#" style="color: #2A6DF0; text-decoration: none;">Divisions</a>
+      <a href="#" style="color: #D1D9FF; text-decoration: none;">Products</a>
+      <a href="#" style="color: #D1D9FF; text-decoration: none;">Services</a>
+      <a href="#" style="color: #D1D9FF; text-decoration: none;">Portfolio</a>
+      <a href="#" style="color: #D1D9FF; text-decoration: none;">Contact</a>
+    </div>
+    <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+  </div>
+</nav>
+
+<main>
+  <!-- Hero Section -->
+  <section class="division-hero" style="padding: 80px 0 60px;">
+    <div class="container">
+      <a href="#" class="back-link" onclick="history.back(); return false;"><i class="fas fa-arrow-left"></i> Back to Home</a>
+      <div class="reveal" style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <span style="background: rgba(42,109,240,0.2); padding: 6px 16px; border-radius: 40px; font-size: 0.8rem;">✦ The Ecosystem Structure</span>
+        <h1 style="font-size: 3.5rem; font-weight: 800; margin-top: 24px; background: linear-gradient(135deg, #FFF, #8B5CF6); background-clip: text; -webkit-background-clip: text; color: transparent;">Four Pillars. One Vision.</h1>
+        <p style="color: #9ca3af; margin-top: 20px; font-size: 1.2rem;">RDS TEAM operates through four specialized divisions — each built to dominate its domain while connected under one ecosystem.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RDS Group Division -->
+  <section style="padding: 60px 0 40px;">
+    <div class="container">
+      <div class="reveal glass-card" style="border-left: 5px solid #22c55e; padding: 40px;">
+        <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: space-between;">
+          <div><i class="fas fa-store" style="font-size: 3rem; color: #22c55e;"></i><h2 style="font-size: 2.2rem; font-weight: 700; margin-top: 8px;">RDS Group</h2><p style="color: #cbd5e1;">Retail & Consumer Division</p></div>
+          <span style="background: #22c55e20; padding: 8px 20px; border-radius: 40px; color: #22c55e; font-weight: 600;">Live Products →</span>
+        </div>
+        <p style="margin-top: 24px; line-height: 1.6;">Revolutionizing retail experience through innovative platforms, smart grocery solutions, and rental ecosystems.</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 32px;">
+          <div style="background: rgba(34,197,94,0.1); border-radius: 24px; padding: 20px;"><i class="fas fa-shopping-cart" style="color: #22c55e; font-size: 1.8rem;"></i><h3 style="font-size: 1.4rem; font-weight: 600; margin: 12px 0;">OKmart</h3><p>Smart retail & grocery delivery platform</p><a href="https://okmart.netlify.app/" target="_blank" style="color: #22c55e; display: inline-block; margin-top: 12px;">Visit →</a></div>
+          <div style="background: rgba(34,197,94,0.1); border-radius: 24px; padding: 20px;"><i class="fas fa-person-walking" style="color: #22c55e; font-size: 1.8rem;"></i><h3 style="font-size: 1.4rem; font-weight: 600; margin: 12px 0;">Walk-Wise</h3><p>AI-powered pedestrian & mobility analytics</p><span style="color: #aaa; font-size: 0.8rem;">Coming 2026</span></div>
+          <div style="background: rgba(34,197,94,0.1); border-radius: 24px; padding: 20px;"><i class="fas fa-building" style="color: #22c55e; font-size: 1.8rem;"></i><h3 style="font-size: 1.4rem; font-weight: 600; margin: 12px 0;">RentySide</h3><p>Rental, booking & real-estate ecosystem</p><a href="https://rentyside.in/" target="_blank" style="color: #22c55e; display: inline-block; margin-top: 12px;">Explore →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RDS Technology Division (Expandable) -->
+  <section style="padding: 40px 0;">
+    <div class="container">
+      <div class="reveal glass-card" style="border-left: 5px solid #3b82f6; padding: 40px;">
+        <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: space-between;">
+          <div><i class="fas fa-microchip" style="font-size: 3rem; color: #3b82f6;"></i><h2 style="font-size: 2.2rem; font-weight: 700; margin-top: 8px;">RDS Technology</h2><p style="color: #cbd5e1;">Product & Service Division</p></div>
+          <button class="expand-toggle" style="background: #3b82f620; border: 1px solid #3b82f6; padding: 8px 20px; border-radius: 40px; cursor: pointer;" onclick="toggleExpand(this)"><i class="fas fa-chevron-down"></i> View Structure</button>
+        </div>
+        <p style="margin-top: 24px; line-height: 1.6;">Building the future of software — from enterprise web apps to AI-powered SaaS products and utility platforms.</p>
+        <div class="expandable-content" style="max-height: 0; overflow: hidden; transition: max-height 0.5s;">
+          <div style="margin-top: 32px;">
+            <h3 style="color: #3b82f6; margin-bottom: 16px;"><i class="fas fa-briefcase"></i> Service Division</h3>
+            <div class="tech-grid">
+              <div class="sub-item"><i class="fas fa-code"></i> Website Development</div>
+              <div class="sub-item"><i class="fas fa-mobile-alt"></i> App Development</div>
+              <div class="sub-item"><i class="fas fa-tools"></i> Maintenance Services</div>
+              <div class="sub-item"><i class="fas fa-laptop-code"></i> Custom Software</div>
+              <div class="sub-item"><i class="fas fa-chart-line"></i> Client Projects</div>
+            </div>
+            <h3 style="color: #3b82f6; margin: 28px 0 16px;"><i class="fas fa-cube"></i> Product Division</h3>
+            <div class="tech-grid">
+              <div class="sub-item"><i class="fas fa-toolbox"></i> ToolTari</div>
+              <div class="sub-item"><i class="fas fa-rocket"></i> Future SaaS Products</div>
+              <div class="sub-item"><i class="fas fa-brain"></i> AI Platforms</div>
+              <div class="sub-item"><i class="fas fa-plug"></i> Utility Tools</div>
+              <div class="sub-item"><i class="fas fa-microphone"></i> Future Digital Products</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="https://tooltari.in/" target="_blank" class="btn-primary" style="padding: 10px 24px; font-size: 0.9rem;">Explore ToolTari →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RDS Media Division -->
+  <section style="padding: 40px 0;">
+    <div class="container">
+      <div class="reveal glass-card" style="border-left: 5px solid #f97316; padding: 40px;">
+        <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: space-between;">
+          <div><i class="fas fa-photo-video" style="font-size: 3rem; color: #f97316;"></i><h2 style="font-size: 2.2rem; font-weight: 700; margin-top: 8px;">RDS Media</h2><p style="color: #cbd5e1;">Creative & Entertainment Division</p></div>
+          <button class="expand-toggle" style="background: #f9731620; border: 1px solid #f97316; padding: 8px 20px; border-radius: 40px; cursor: pointer;" onclick="toggleExpand(this)"><i class="fas fa-chevron-down"></i> View Content</button>
+        </div>
+        <p style="margin-top: 24px; line-height: 1.6;">Creating premium entertainment content across gaming, anime, movies, and digital streaming platforms.</p>
+        <div class="expandable-content" style="max-height: 0; overflow: hidden;">
+          <div class="media-grid" style="margin-top: 32px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            <div class="sub-item"><i class="fas fa-gamepad"></i> Gaming Channel</div>
+            <div class="sub-item"><i class="fas fa-film"></i> OMDEV Platform</div>
+            <div class="sub-item"><i class="fas fa-dragon"></i> Anime News</div>
+            <div class="sub-item"><i class="fas fa-ticket-alt"></i> Movies & Web-Series</div>
+            <div class="sub-item"><i class="fas fa-newspaper"></i> Entertainment Content</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HRF Group Division -->
+  <section style="padding: 40px 0 80px;">
+    <div class="container">
+      <div class="reveal glass-card" style="border-left: 5px solid #a855f7; padding: 40px;">
+        <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: space-between;">
+          <div><i class="fas fa-hand-fist" style="font-size: 3rem; color: #a855f7;"></i><h2 style="font-size: 2.2rem; font-weight: 700; margin-top: 8px;">HRF Group</h2><p style="color: #cbd5e1;">Training & Discipline Division</p></div>
+          <button class="expand-toggle" style="background: #a855f720; border: 1px solid #a855f7; padding: 8px 20px; border-radius: 40px; cursor: pointer;" onclick="toggleExpand(this)"><i class="fas fa-chevron-down"></i> View Programs</button>
+        </div>
+        <p style="margin-top: 24px; line-height: 1.6;">Empowering individuals through leadership training, physical discipline, emergency response, and community service.</p>
+        <div class="expandable-content" style="max-height: 0; overflow: hidden;">
+          <div class="hrf-grid" style="margin-top: 32px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            <div class="sub-item"><i class="fas fa-dumbbell"></i> Physical Training</div>
+            <div class="sub-item"><i class="fas fa-chalkboard-user"></i> Leadership Programs</div>
+            <div class="sub-item"><i class="fas fa-truck-medical"></i> Emergency Response</div>
+            <div class="sub-item"><i class="fas fa-hand-holding-heart"></i> Social Service</div>
+            <div class="sub-item"><i class="fas fa-shield-alt"></i> Internal Discipline</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ecosystem Connection Visual -->
+  <section style="padding: 40px 0 80px;">
+    <div class="container">
+      <div class="reveal" style="background: linear-gradient(135deg, #0A0F1A, #03050A); border-radius: 48px; padding: 48px; text-align: center;">
+        <i class="fas fa-project-diagram" style="font-size: 3rem; color: #2A6DF0; margin-bottom: 20px;"></i>
+        <h2 style="font-size: 2rem; font-weight: 700;">Connected Ecosystem</h2>
+        <p style="color: #9ca3af; max-width: 600px; margin: 16px auto;">All divisions work synergistically — RDS Technology powers RDS Group's platforms, RDS Media amplifies reach, and HRF Group builds the culture.</p>
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 32px;">
+          <span style="background: #22c55e20; padding: 6px 18px; border-radius: 40px;">RDS Group</span>
+          <i class="fas fa-arrow-right" style="color: #2A6DF0;"></i>
+          <span style="background: #3b82f620; padding: 6px 18px; border-radius: 40px;">Technology</span>
+          <i class="fas fa-arrow-right" style="color: #2A6DF0;"></i>
+          <span style="background: #f9731620; padding: 6px 18px; border-radius: 40px;">Media</span>
+          <i class="fas fa-arrow-right" style="color: #2A6DF0;"></i>
+          <span style="background: #a855f720; padding: 6px 18px; border-radius: 40px;">HRF Group</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer style="border-top: 1px solid #1E2A3A; padding: 50px 0 40px;">
+  <div class="container">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
+      <div><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGyK2_7WjbZwBhFOY_X5HpweWQHGD7kjrgxi0bzYugPn14r5FWqL5_ADwtg8dRJXZT_0Qn90QzDpbfpvb7sg78np0IbA2s7Jl5rnliBKYcFYsteF7TU2BLFrtgUERaUX9dmFPGrtexO_3_WUNSKmZUmU2XFLZWoXlUMnNYdrGOD0U8xcXPmoGNOuia/s320-rw/rds.gif" style="height: 55px; border-radius: 12px;"></div>
+      <div style="display: flex; gap: 60px; flex-wrap: wrap;">
+        <div><h4 style="font-weight: 700;">Quick Links</h4><ul style="margin-top: 12px; line-height: 1.8; list-style: none;"><li>Home</li><li>Divisions</li><li>Products</li><li>Contact</li></ul></div>
+        <div><h4 style="font-weight: 700;">Legal</h4><ul style="margin-top: 12px; line-height: 1.8; list-style: none;"><li>Privacy</li><li>Terms</li><li>Disclaimer</li></ul></div>
+      </div>
+    </div>
+    <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid #1f2937; text-align: center; font-size: 0.75rem; color: #6b7280;">© 2025 RDS TEAM — Ecosystem Hub. Built for scalability.</div>
+  </div>
+</footer>
+
+<script>
+  // Reveal animations
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+  
+  // Expandable toggle function
+  window.toggleExpand = function(btn) {
+    const card = btn.closest('.glass-card');
+    const content = card.querySelector('.expandable-content');
+    const icon = btn.querySelector('i');
+    if(content.style.maxHeight && content.style.maxHeight !== '0px') {
+      content.style.maxHeight = '0';
+      icon.classList.remove('fa-chevron-up');
+      icon.classList.add('fa-chevron-down');
+    } else {
+      content.style.maxHeight = content.scrollHeight + 'px';
+      icon.classList.remove('fa-chevron-down');
+      icon.classList.add('fa-chevron-up');
+    }
+  }
+  
+  document.querySelector('.mobile-menu-btn')?.addEventListener('click', () => alert('Full navigation — more pages coming soon!'));
+</script>
+</body>
+</html>
