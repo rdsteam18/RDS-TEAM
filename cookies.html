@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Cookie Policy | RDS TEAM</title>
+  <meta name="description" content="RDS TEAM Cookie Policy - Learn about how we use cookies and similar technologies on our website.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #05070A;
+      color: #EDF2FF;
+      overflow-x: hidden;
+    }
+    
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0A0F1A; }
+    ::-webkit-scrollbar-thumb { background: #2A6DF0; border-radius: 10px; }
+    
+    /* ========== NAVBAR STYLES ========== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(16px);
+      background: rgba(5, 7, 10, 0.85);
+      border-bottom: 1px solid rgba(42, 109, 240, 0.2);
+    }
+    
+    .navbar-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .logo img {
+      height: 38px;
+      width: auto;
+    }
+    
+    .logo span {
+      font-weight: 800;
+      font-size: 1.3rem;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+    
+    .nav-links a {
+      color: #D1D9FF;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #2A6DF0;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropbtn {
+      background: transparent;
+      color: #D1D9FF;
+      border: none;
+      font-weight: 500;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .dropbtn:hover {
+      color: #2A6DF0;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 35px;
+      right: 0;
+      background: rgba(10, 20, 35, 0.95);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(42, 109, 240, 0.3);
+      border-radius: 16px;
+      min-width: 140px;
+      z-index: 200;
+      padding: 8px 0;
+    }
+    
+    .dropdown-content a {
+      color: #D1D9FF;
+      padding: 10px 20px;
+      display: block;
+      font-size: 0.9rem;
+    }
+    
+    .dropdown-content a:hover {
+      background: rgba(42, 109, 240, 0.2);
+      color: #2A6DF0;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+      background: none;
+      border: none;
+      z-index: 1001;
+    }
+    
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(5, 7, 10, 0.98);
+      backdrop-filter: blur(20px);
+      z-index: 2000;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .mobile-menu-overlay.active {
+      transform: translateX(0);
+    }
+    
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      border-bottom: 1px solid rgba(42, 109, 240, 0.2);
+    }
+    
+    .mobile-menu-header .logo-text {
+      font-size: 1.3rem;
+      font-weight: 800;
+    }
+    
+    .mobile-menu-close {
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+      background: none;
+      border: none;
+    }
+    
+    .mobile-menu-links {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 24px;
+      gap: 8px;
+    }
+    
+    .mobile-menu-links a {
+      color: #D1D9FF;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 500;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .mobile-menu-links a i {
+      width: 28px;
+      font-size: 1.2rem;
+      color: #2A6DF0;
+    }
+    
+    .mobile-menu-links a:hover {
+      color: #2A6DF0;
+      padding-left: 10px;
+    }
+    
+    .mobile-menu-footer {
+      margin-top: auto;
+      padding: 24px;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 0.75rem;
+      color: #6b7280;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    .glass-card {
+      background: rgba(10, 20, 35, 0.55);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(42, 109, 240, 0.2);
+      border-radius: 32px;
+      padding: 48px;
+    }
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #2A6DF0;
+      text-decoration: none;
+      margin-bottom: 24px;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    
+    .back-link:hover {
+      gap: 12px;
+      color: #8B5CF6;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, #FFF, #2A6DF0);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    
+    h2 {
+      font-size: 1.5rem;
+      margin: 32px 0 16px;
+      color: #2A6DF0;
+    }
+    
+    h3 {
+      font-size: 1.2rem;
+      margin: 24px 0 12px;
+      color: #8B5CF6;
+    }
+    
+    p {
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    
+    ul, ol {
+      color: #cbd5e1;
+      margin-left: 24px;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+    
+    li {
+      margin-bottom: 8px;
+    }
+    
+    .last-updated {
+      color: #6b7280;
+      font-size: 0.85rem;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .legal-nav {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .legal-nav a {
+      color: #9ca3af;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+    
+    .legal-nav a:hover,
+    .legal-nav a.active {
+      color: #2A6DF0;
+    }
+    
+    .cookie-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    
+    .btn-cookie {
+      background: transparent;
+      border: 1px solid rgba(42, 109, 240, 0.5);
+      padding: 12px 24px;
+      border-radius: 40px;
+      color: #CBD5FF;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .btn-cookie:hover {
+      background: #2A6DF0;
+      border-color: #2A6DF0;
+      color: white;
+    }
+    
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    
+    .cookie-table th,
+    .cookie-table td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .cookie-table th {
+      color: #2A6DF0;
+      font-weight: 600;
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .glass-card {
+        padding: 28px;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      h2 {
+        font-size: 1.3rem;
+      }
+      
+      .cookie-table th,
+      .cookie-table td {
+        padding: 8px;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="logo">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png" alt="RDS TEAM Logo">
+      <span>RDS TEAM</span>
+    </div>
+    
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="divisions.html">Divisions</a>
+      <a href="products.html">Products</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <div class="dropdown">
+        <button class="dropbtn">More <i class="fas fa-chevron-down"></i></button>
+        <div class="dropdown-content">
+          <a href="blog.html">Blog</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+    
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- Fullscreen Mobile Menu -->
+<div class="mobile-menu-overlay" id="mobileMenuOverlay">
+  <div class="mobile-menu-header">
+    <span class="logo-text">RDS TEAM</span>
+    <button class="mobile-menu-close" id="closeMenuBtn">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="mobile-menu-links">
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="divisions.html"><i class="fas fa-layer-group"></i> Divisions</a>
+    <a href="products.html"><i class="fas fa-cube"></i> Products</a>
+    <a href="services.html"><i class="fas fa-cogs"></i> Services</a>
+    <a href="portfolio.html"><i class="fas fa-briefcase"></i> Portfolio</a>
+    <a href="blog.html"><i class="fas fa-newspaper"></i> Blog</a>
+    <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+    <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+  </div>
+  <div class="mobile-menu-footer">
+    <p>© 2025 RDS TEAM — Ecosystem Hub</p>
+  </div>
+</div>
+
+<main style="padding: 60px 0 100px;">
+  <div class="container">
+    <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    
+    <div class="legal-nav">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="cookies.html" class="active">Cookie Policy</a>
+    </div>
+    
+    <div class="glass-card">
+      <h1>Cookie Policy</h1>
+      <div class="last-updated">Last Updated: May 9, 2026</div>
+      
+      <p>This Cookie Policy explains how RDS TEAM ("we", "us", or "our") uses cookies and similar technologies on our website. By using our website, you consent to the use of cookies as described in this policy.</p>
+      
+      <h2>What Are Cookies?</h2>
+      <p>Cookies are small text files that are placed on your computer, smartphone, or other device when you visit a website. They are widely used to make websites work more efficiently, as well as to provide information to the owners of the site.</p>
+      
+      <h2>How We Use Cookies</h2>
+      <p>We use cookies for the following purposes:</p>
+      <ul>
+        <li><strong>Essential Cookies:</strong> Necessary for the website to function properly</li>
+        <li><strong>Performance Cookies:</strong> Help us understand how visitors interact with our website</li>
+        <li><strong>Functional Cookies:</strong> Remember your preferences and settings</li>
+        <li><strong>Analytics Cookies:</strong> Collect information about your use of our website</li>
+      </ul>
+      
+      <h2>Types of Cookies We Use</h2>
+      <table class="cookie-table">
+        <thead>
+          <tr><th>Cookie Type</th><th>Purpose</th><th>Duration</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>session_id</td><td>Essential - Maintains your session</td><td>Session</td></tr>
+          <tr><td>preferences</td><td>Functional - Stores user preferences</td><td>1 year</td></tr>
+          <tr><td>_ga</td><td>Analytics - Google Analytics tracking</td><td>2 years</td></tr>
+          <tr><td>_gid</td><td>Analytics - Google Analytics tracking</td><td>24 hours</td></tr>
+        </tbody>
+      </table>
+      
+      <h2>Third-Party Cookies</h2>
+      <p>We may also use third-party services that place cookies on our website, including:</p>
+      <ul>
+        <li><strong>Google Analytics:</strong> To analyze website traffic and user behavior</li>
+        <li><strong>Netlify Analytics:</strong> For website performance monitoring</li>
+        <li><strong>Formspree:</strong> For contact form submissions</li>
+      </ul>
+      
+      <h2>Your Cookie Choices</h2>
+      <p>You can control and manage cookies in various ways. Most browsers allow you to:</p>
+      <ul>
+        <li>View what cookies are installed and delete them individually</li>
+        <li>Block third-party cookies</li>
+        <li>Block all cookies from being set</li>
+        <li>Delete all cookies when you close your browser</li>
+      </ul>
+      
+      <h3>Browser Settings</h3>
+      <p>You can change your browser settings to refuse cookies or alert you when cookies are being sent. Here's how to manage cookies in popular browsers:</p>
+      <ul>
+        <li><strong>Chrome:</strong> Settings → Privacy and Security → Cookies and other site data</li>
+        <li><strong>Firefox:</strong> Options → Privacy & Security → Cookies and Site Data</li>
+        <li><strong>Safari:</strong> Preferences → Privacy → Cookies and website data</li>
+        <li><strong>Edge:</strong> Settings → Privacy, search, and services → Cookies</li>
+      </ul>
+      
+      <h2>Cookie Consent</h2>
+      <p>When you first visit our website, you will see a cookie banner asking for your consent to set non-essential cookies. By continuing to use our website, you agree to our use of cookies as described in this policy.</p>
+      
+      <div class="cookie-buttons">
+        <button class="btn-cookie" onclick="acceptCookies()"><i class="fas fa-check"></i> Accept All Cookies</button>
+        <button class="btn-cookie" onclick="declineCookies()"><i class="fas fa-times"></i> Decline Non-Essential</button>
+      </div>
+      
+      <h2>Changes to This Cookie Policy</h2>
+      <p>We may update this Cookie Policy from time to time to reflect changes in technology, legislation, or our data practices. Any changes will be posted on this page with an updated "Last Updated" date.</p>
+      
+      <h2>Contact Us</h2>
+      <p>If you have any questions about our use of cookies, please contact us:</p>
+      <ul>
+        <li><strong>Email:</strong> rdsteam18@gmail.com</li>
+        <li><strong>WhatsApp:</strong> +91 99822 39821</li>
+        <li><strong>Website:</strong> rdsteam.netlify.app</li>
+      </ul>
+      
+      <div style="margin-top: 40px; padding: 20px; background: rgba(42,109,240,0.1); border-radius: 24px; text-align: center;">
+        <p style="margin-bottom: 0;">By continuing to use our website, you agree to our use of cookies as described in this policy.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer style="border-top: 1px solid #1E2A3A; padding: 40px 0; text-align: center; font-size: 0.75rem; color: #6b7280;">
+  <div class="container">
+    © 2025 RDS TEAM — Ecosystem Hub. | <a href="privacy.html" style="color: #9ca3af; text-decoration: none;">Privacy</a> | <a href="terms.html" style="color: #9ca3af; text-decoration: none;">Terms</a> | <a href="disclaimer.html" style="color: #9ca3af; text-decoration: none;">Disclaimer</a> | <a href="cookies.html" style="color: #2A6DF0; text-decoration: none;">Cookies</a>
+  </div>
+</footer>
+
+<script>
+  // Mobile Menu Functionality
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+  const closeMenuBtn = document.getElementById('closeMenuBtn');
+  
+  if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenuOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  }
+  
+  if (closeMenuBtn) {
+    closeMenuBtn.addEventListener('click', () => {
+      mobileMenuOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  }
+  
+  const mobileLinks = document.querySelectorAll('.mobile-menu-links a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenuOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
+  
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
+      mobileMenuOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+  
+  // Cookie Functions
+  function acceptCookies() {
+    localStorage.setItem('cookiesAccepted', 'true');
+    alert('Thank you! All cookies have been accepted.');
+  }
+  
+  function declineCookies() {
+    localStorage.setItem('cookiesAccepted', 'false');
+    alert('Non-essential cookies have been declined. Essential cookies will still function.');
+  }
+</script>
+</body>
+</html>
