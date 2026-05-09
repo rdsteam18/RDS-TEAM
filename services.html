@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Services | RDS TEAM — Premium Digital Agency</title>
+  <meta name="description" content="RDS TEAM offers premium digital services: Web Development, App Development, UI/UX Design, SEO, Branding, Maintenance & Custom Solutions.">
+  <meta name="keywords" content="web development, app development, UI/UX design, SEO services, branding, digital agency, RDS services">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="RDS TEAM Services — Premium Digital Solutions">
+  <meta property="og:description" content="Enterprise-grade web development, mobile apps, UI/UX, SEO, and branding services.">
+  <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png">
+  <meta property="og:url" content="https://rdsteam.netlify.app/services.html">
+  
+  <link rel="canonical" href="https://rdsteam.netlify.app/services.html">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #05070A;
+      color: #EDF2FF;
+      overflow-x: hidden;
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0A0F1A; }
+    ::-webkit-scrollbar-thumb { background: #2A6DF0; border-radius: 10px; }
+    
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    
+    .glass-card {
+      background: rgba(10, 20, 35, 0.55);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(42, 109, 240, 0.2);
+      border-radius: 32px;
+      transition: all 0.4s ease;
+    }
+    .glass-card:hover {
+      border-color: rgba(42, 109, 240, 0.6);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 35px -15px rgba(42, 109, 240, 0.3);
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #2A6DF0, #8B5CF6);
+      padding: 12px 32px;
+      border-radius: 40px;
+      font-weight: 600;
+      color: white;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(42, 109, 240, 0.3);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: none;
+      text-decoration: none;
+    }
+    .btn-primary:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 28px rgba(42, 109, 240, 0.5);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid rgba(42, 109, 240, 0.7);
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-weight: 500;
+      color: #CBD5FF;
+      transition: all 0.3s;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+    .btn-outline:hover {
+      border-color: #2A6DF0;
+      background: rgba(42, 109, 240, 0.1);
+      color: white;
+    }
+    
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      background: rgba(5, 7, 10, 0.75);
+      border-bottom: 1px solid rgba(42, 109, 240, 0.2);
+    }
+    
+    .service-card {
+      background: rgba(12, 20, 35, 0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(66, 153, 225, 0.15);
+      border-radius: 32px;
+      transition: all 0.4s ease;
+      text-align: center;
+    }
+    .service-card:hover {
+      border-color: rgba(42, 109, 240, 0.5);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 35px -15px rgba(42, 109, 240, 0.3);
+    }
+    
+    .process-step {
+      background: rgba(42, 109, 240, 0.1);
+      border-radius: 60px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+    .process-step:hover {
+      background: rgba(42, 109, 240, 0.2);
+      transform: scale(1.02);
+    }
+    
+    .badge {
+      background: rgba(42,109,240,0.2);
+      padding: 4px 12px;
+      border-radius: 40px;
+      font-size: 0.7rem;
+    }
+    
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; }
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: block; }
+    }
+    .mobile-menu-btn { display: none; font-size: 1.8rem; cursor: pointer; }
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #2A6DF0;
+      text-decoration: none;
+      margin-bottom: 24px;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .back-link:hover { gap: 12px; color: #8B5CF6; }
+    
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .tech-stack span {
+      background: rgba(255,255,255,0.05);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 16px 24px;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png" alt="Logo" style="height: 38px;">
+      <span style="font-weight: 800; font-size: 1.3rem;">RDS TEAM</span>
+    </div>
+    <div class="nav-links" style="display: flex; gap: 32px;">
+      <a href="index.html" style="color: #D1D9FF; text-decoration: none;">Home</a>
+      <a href="divisions.html" style="color: #D1D9FF; text-decoration: none;">Divisions</a>
+      <a href="products.html" style="color: #D1D9FF; text-decoration: none;">Products</a>
+      <a href="services.html" style="color: #2A6DF0; text-decoration: none;">Services</a>
+      <a href="portfolio.html" style="color: #D1D9FF; text-decoration: none;">Portfolio</a>
+      <a href="contact.html" style="color: #D1D9FF; text-decoration: none;">Contact</a>
+    </div>
+    <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+  </div>
+</nav>
+
+<main>
+  <!-- Hero Section -->
+  <section style="padding: 80px 0 60px;">
+    <div class="container">
+      <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+      <div class="reveal" style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <span class="badge"><i class="fas fa-crown"></i> Premium Agency</span>
+        <h1 style="font-size: 3.5rem; font-weight: 800; margin-top: 24px; background: linear-gradient(135deg, #FFF, #8B5CF6, #2A6DF0); background-clip: text; -webkit-background-clip: text; color: transparent;">Enterprise Digital Services</h1>
+        <p style="color: #9ca3af; margin-top: 20px; font-size: 1.2rem;">From concept to deployment — we build scalable digital solutions for modern businesses.</p>
+        <div style="margin-top: 32px;">
+          <a href="contact.html" class="btn-primary"><i class="fas fa-calendar-check"></i> Start a Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services Grid -->
+  <section style="padding: 40px 0;">
+    <div class="container">
+      <div class="reveal" style="text-align: center; margin-bottom: 48px;">
+        <h2 style="font-size: 2rem; font-weight: 700;">What We Offer</h2>
+        <p style="color: #9ca3af;">Comprehensive digital solutions tailored to your business</p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+        <!-- Web Development -->
+        <div class="service-card reveal" style="padding: 32px;">
+          <div style="background: rgba(42,109,240,0.15); width: 70px; height: 70px; border-radius: 30px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+            <i class="fas fa-globe" style="font-size: 2rem; color: #2A6DF0;"></i>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 700;">Web Development</h3>
+          <p style="color: #cbd5e1; margin: 16px 0;">Modern, fast, and responsive websites built with Next.js, React, and cutting-edge technologies.</p>
+          <div class="tech-stack">
+            <span>React</span><span>Next.js</span><span>Vue</span><span>Node.js</span>
+          </div>
+        </div>
+        
+        <!-- App Development -->
+        <div class="service-card reveal" style="padding: 32px;">
+          <div style="background: rgba(139,92,246,0.15); width: 70px; height: 70px; border-radius: 30px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+            <i class="fas fa-mobile-alt" style="font-size: 2rem; color: #8B5CF6;"></i>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 700;">App Development</h3>
+          <p style="color: #cbd5e1; margin: 16px 0;">Native and cross-platform mobile apps for iOS & Android with seamless user experience.</p>
+          <div class="tech-stack">
+            <span>React Native</span><span>Flutter</span><span>Swift</span><span>Kotlin</span>
+          </div>
+        </div>
+        
+        <!-- UI/UX Design -->
+        <div class="service-card reveal" style="padding: 32px;">
+          <div style="background: rgba(34,197,94,0.15); width: 70px; height: 70px; border-radius: 30px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+            <i class="fas fa-palette" style="font-size: 2rem; color: #22c55e;"></i>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 700;">UI/UX Design</h3>
+          <p style="color: #cbd5e1; margin: 16px 0;">Beautiful, intuitive interfaces that users love. Complete design systems and prototypes.</p>
+          <div class="tech-stack">
+            <span>Figma</span><span>Adobe XD</span><span>Prototyping</span>
+          </div>
+        </div>
+        
+        <!-- SEO Optimization -->
+        <div class="service-card reveal" style="padding: 32px;">
+          <div style="background: rgba(249,115,22,0.15); width: 70px; height: 70px; border-radius: 30px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+            <i class="fas fa-chart-line" style="font-size: 2rem; color: #f97316;"></i>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 700;">SEO Optimization</h3>
+          <p style="color: #cbd5e1; margin: 16px 0;">Rank higher on Google with technical SEO, content strategy, and performance optimization.</p>
+          <div class="tech-stack">
+            <span>Technical SEO</span><span>Analytics</span><span>Schema</span>
+          </div>
+        </div>
+        
+        <!-- Maintenance & Support -->
+        <div class="service-card reveal" style="padding: 32px;">
+          <div style="background: rgba(6,182,212,0.15); width: 70px; height: 70px; border-radius: 30px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+            <i class="fas fa-tools" style="font-size: 2rem; color: #06b6d4;"></i>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 700;">Maintenance</h3>
+          <p style="color: #cbd5e1; margin: 16px 0;">24/7 monitoring, security updates, performance tuning, and reliable support.</p>
+          <div class="tech-stack">
+            <span>Monitoring</span><span>Backup</span><span>Security</span>
+          </div>
+        </div>
+        
+        <!-- Branding -->
+        <div class="service-card reveal" style="padding: 32px;">
+          <div style="background: rgba(236,72,153,0.15); width: 70px; height: 70px; border-radius: 30px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+            <i class="fas fa-trademark" style="font-size: 2rem; color: #ec4899;"></i>
+          </div>
+          <h3 style="font-size: 1.5rem; font-weight: 700;">Branding</h3>
+          <p style="color: #cbd5e1; margin: 16px 0;">Complete brand identity, logos, visual language, and brand strategy.</p>
+          <div class="tech-stack">
+            <span>Identity</span><span>Strategy</span><span>Guidelines</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Solutions Section -->
+  <section style="padding: 60px 0;">
+    <div class="container">
+      <div class="reveal glass-card" style="padding: 48px; text-align: center;">
+        <i class="fas fa-cogs" style="font-size: 3rem; color: #2A6DF0;"></i>
+        <h2 style="font-size: 2rem; font-weight: 700; margin: 20px 0;">Custom Business Solutions</h2>
+        <p style="color: #cbd5e1; max-width: 700px; margin: 0 auto;">Need something unique? We build tailor-made platforms, ERP systems, CRM, dashboards, and internal tools.</p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 32px;">
+          <span class="badge" style="background: #2A6DF020;">ERP Systems</span>
+          <span class="badge" style="background: #2A6DF020;">CRM Platforms</span>
+          <span class="badge" style="background: #2A6DF020;">Admin Dashboards</span>
+          <span class="badge" style="background: #2A6DF020;">Automation Tools</span>
+          <span class="badge" style="background: #2A6DF020;">Analytics Platforms</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section style="padding: 60px 0;">
+    <div class="container">
+      <div class="reveal" style="text-align: center; margin-bottom: 48px;">
+        <h2 style="font-size: 2rem; font-weight: 700;">Our Process</h2>
+        <p style="color: #9ca3af;">How we bring your ideas to life</p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px;">
+        <div class="process-step reveal">
+          <div style="background: #2A6DF0; width: 50px; height: 50px; border-radius: 30px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+            <span style="font-size: 1.5rem; font-weight: 700;">1</span>
+          </div>
+          <h4 style="font-weight: 700;">Discovery</h4>
+          <p style="font-size: 0.85rem; color: #9ca3af;">Understanding your goals & requirements</p>
+        </div>
+        <div class="process-step reveal">
+          <div style="background: #8B5CF6; width: 50px; height: 50px; border-radius: 30px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+            <span style="font-size: 1.5rem; font-weight: 700;">2</span>
+          </div>
+          <h4 style="font-weight: 700;">Strategy</h4>
+          <p style="font-size: 0.85rem; color: #9ca3af;">Planning architecture & timeline</p>
+        </div>
+        <div class="process-step reveal">
+          <div style="background: #22c55e; width: 50px; height: 50px; border-radius: 30px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+            <span style="font-size: 1.5rem; font-weight: 700;">3</span>
+          </div>
+          <h4 style="font-weight: 700;">Development</h4>
+          <p style="font-size: 0.85rem; color: #9ca3af;">Agile sprints & regular updates</p>
+        </div>
+        <div class="process-step reveal">
+          <div style="background: #f97316; width: 50px; height: 50px; border-radius: 30px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+            <span style="font-size: 1.5rem; font-weight: 700;">4</span>
+          </div>
+          <h4 style="font-weight: 700;">Launch & Support</h4>
+          <p style="font-size: 0.85rem; color: #9ca3af;">Deployment & ongoing maintenance</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies We Use -->
+  <section style="padding: 60px 0 80px;">
+    <div class="container">
+      <div class="reveal" style="background: linear-gradient(135deg, #0A0F1A, #03050A); border-radius: 48px; padding: 48px; text-align: center;">
+        <i class="fas fa-microchip" style="font-size: 3rem; color: #2A6DF0; margin-bottom: 20px;"></i>
+        <h2 style="font-size: 2rem; font-weight: 700;">Modern Tech Stack</h2>
+        <p style="color: #9ca3af; max-width: 600px; margin: 16px auto;">We use cutting-edge technologies to build future-proof solutions</p>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 32px;">
+          <span class="badge" style="background: #3b82f620;">React</span>
+          <span class="badge" style="background: #3b82f620;">Next.js</span>
+          <span class="badge" style="background: #3b82f620;">Node.js</span>
+          <span class="badge" style="background: #3b82f620;">TypeScript</span>
+          <span class="badge" style="background: #3b82f620;">Tailwind CSS</span>
+          <span class="badge" style="background: #3b82f620;">Framer Motion</span>
+          <span class="badge" style="background: #3b82f620;">Firebase</span>
+          <span class="badge" style="background: #3b82f620;">Supabase</span>
+          <span class="badge" style="background: #3b82f620;">MongoDB</span>
+          <span class="badge" style="background: #3b82f620;">PostgreSQL</span>
+        </div>
+        <div style="margin-top: 32px;">
+          <a href="contact.html" class="btn-primary"><i class="fas fa-rocket"></i> Discuss Your Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer style="border-top: 1px solid #1E2A3A; padding: 50px 0 40px;">
+  <div class="container">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
+      <div>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGyK2_7WjbZwBhFOY_X5HpweWQHGD7kjrgxi0bzYugPn14r5FWqL5_ADwtg8dRJXZT_0Qn90QzDpbfpvb7sg78np0IbA2s7Jl5rnliBKYcFYsteF7TU2BLFrtgUERaUX9dmFPGrtexO_3_WUNSKmZUmU2XFLZWoXlUMnNYdrGOD0U8xcXPmoGNOuia/s320-rw/rds.gif" style="height: 55px; border-radius: 12px;" alt="Animated Logo">
+      </div>
+      <div style="display: flex; gap: 60px; flex-wrap: wrap;">
+        <div>
+          <h4 style="font-weight: 700;">Quick Links</h4>
+          <ul style="margin-top: 12px; line-height: 1.8; list-style: none;">
+            <li><a href="index.html" style="color: #9ca3af; text-decoration: none;">Home</a></li>
+            <li><a href="divisions.html" style="color: #9ca3af; text-decoration: none;">Divisions</a></li>
+            <li><a href="products.html" style="color: #9ca3af; text-decoration: none;">Products</a></li>
+            <li><a href="services.html" style="color: #2A6DF0; text-decoration: none;">Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="font-weight: 700;">Services</h4>
+          <ul style="margin-top: 12px; line-height: 1.8; list-style: none;">
+            <li><a href="services.html" style="color: #9ca3af; text-decoration: none;">Web Development</a></li>
+            <li><a href="services.html" style="color: #9ca3af; text-decoration: none;">App Development</a></li>
+            <li><a href="services.html" style="color: #9ca3af; text-decoration: none;">UI/UX Design</a></li>
+            <li><a href="services.html" style="color: #9ca3af; text-decoration: none;">SEO & Branding</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="font-weight: 700;">Legal</h4>
+          <ul style="margin-top: 12px; line-height: 1.8; list-style: none;">
+            <li><a href="#" style="color: #9ca3af; text-decoration: none;">Privacy Policy</a></li>
+            <li><a href="#" style="color: #9ca3af; text-decoration: none;">Terms & Conditions</a></li>
+            <li><a href="#" style="color: #9ca3af; text-decoration: none;">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid #1f2937; text-align: center; font-size: 0.75rem; color: #6b7280;">
+      © 2025 RDS TEAM — Ecosystem Hub. Built for scalability. | <a href="index.html" style="color: #6b7280;">rdsteam.netlify.app</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal animations
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { 
+      if(entry.isIntersecting) entry.target.classList.add('active'); 
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+  
+  // Mobile menu
+  document.querySelector('.mobile-menu-btn')?.addEventListener('click', () => {
+    alert('Navigation Menu: Home | Divisions | Products | Services | Portfolio | Contact');
+  });
+</script>
+</body>
+</html>
