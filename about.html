@@ -4,22 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>About | RDS TEAM — Our Story & Mission</title>
-  <meta name="description" content="Learn about RDS TEAM's journey, mission, vision, and values. We're building a futuristic ecosystem connecting retail, technology, media, and training.">
-  <meta name="keywords" content="about RDS TEAM, mission, vision, values, ecosystem, team story">
+  <meta name="description" content="Learn about RDS TEAM's journey, mission, vision, and values. Meet our founder Rajput Devdhar Singh and discover our ecosystem.">
+  <meta name="keywords" content="about RDS TEAM, mission, vision, values, ecosystem, founder, Rajput Devdhar Singh">
+  <meta name="theme-color" content="#05070A">
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png">
-  <link rel="apple-touch-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png">
   
-  <!-- Open Graph -->
-  <meta property="og:title" content="RDS TEAM — About Us">
-  <meta property="og:description" content="Discover the story behind RDS TEAM, our mission to build a connected ecosystem, and our vision for the future.">
-  <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png">
-  <meta property="og:url" content="https://rdsteam.netlify.app/about.html">
-  
-  <link rel="canonical" href="https://rdsteam.netlify.app/about.html">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
   <style>
@@ -28,39 +20,282 @@
       padding: 0;
       box-sizing: border-box;
     }
+    
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+    
     body {
       font-family: 'Inter', sans-serif;
       background: #05070A;
       color: #EDF2FF;
       overflow-x: hidden;
     }
+    
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: #0A0F1A; }
     ::-webkit-scrollbar-thumb { background: #2A6DF0; border-radius: 10px; }
     
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      backdrop-filter: blur(16px);
+      background: rgba(5, 7, 10, 0.85);
+      border-bottom: 1px solid rgba(42, 109, 240, 0.2);
+      transition: all 0.3s ease;
     }
-    .reveal.active { opacity: 1; transform: translateY(0); }
     
-    .glass-card {
-      background: rgba(10, 20, 35, 0.55);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(42, 109, 240, 0.2);
-      border-radius: 32px;
-      transition: all 0.4s ease;
+    .navbar.scrolled {
+      background: rgba(5, 7, 10, 0.95);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
-    .glass-card:hover {
-      border-color: rgba(42, 109, 240, 0.6);
-      transform: translateY(-6px);
-      box-shadow: 0 20px 35px -15px rgba(42, 109, 240, 0.3);
+    
+    .navbar-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .logo img {
+      height: 38px;
+      width: auto;
+    }
+    
+    .logo span {
+      font-weight: 800;
+      font-size: 1.3rem;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+    
+    .nav-links a {
+      color: #D1D9FF;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #2A6DF0;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropbtn {
+      background: transparent;
+      color: #D1D9FF;
+      border: none;
+      font-weight: 500;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .dropbtn:hover {
+      color: #2A6DF0;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 35px;
+      right: 0;
+      background: rgba(10, 20, 35, 0.95);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(42, 109, 240, 0.3);
+      border-radius: 16px;
+      min-width: 140px;
+      z-index: 200;
+      padding: 8px 0;
+    }
+    
+    .dropdown-content a {
+      color: #D1D9FF;
+      padding: 10px 20px;
+      display: block;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    
+    .dropdown-content a:hover {
+      background: rgba(42, 109, 240, 0.2);
+      color: #2A6DF0;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+      background: none;
+      border: none;
+    }
+    
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(5, 7, 10, 0.98);
+      backdrop-filter: blur(20px);
+      z-index: 2000;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .mobile-menu-overlay.active {
+      transform: translateX(0);
+    }
+    
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      border-bottom: 1px solid rgba(42, 109, 240, 0.2);
+    }
+    
+    .mobile-menu-header .logo-text {
+      font-size: 1.3rem;
+      font-weight: 800;
+    }
+    
+    .mobile-menu-close {
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+      background: none;
+      border: none;
+    }
+    
+    .mobile-menu-links {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 24px;
+      gap: 8px;
+    }
+    
+    .mobile-menu-links a {
+      color: #D1D9FF;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 500;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .mobile-menu-links a i {
+      width: 28px;
+      font-size: 1.2rem;
+      color: #2A6DF0;
+    }
+    
+    .mobile-menu-links a:hover {
+      color: #2A6DF0;
+      padding-left: 10px;
+    }
+    
+    .mobile-menu-footer {
+      margin-top: auto;
+      padding: 24px;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 0.75rem;
+      color: #6b7280;
+    }
+    
+    /* Container */
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    /* Hero */
+    .hero {
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      padding-top: 100px;
+    }
+    
+    .hero-badge {
+      background: rgba(42, 109, 240, 0.2);
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      display: inline-block;
+    }
+    
+    .hero-title {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-top: 28px;
+      line-height: 1.2;
+    }
+    
+    .glow-text {
+      background: linear-gradient(135deg, #FFF, #8B5CF6, #2A6DF0);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #2A6DF0;
+      text-decoration: none;
+      margin-bottom: 24px;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    
+    .btn-back:hover {
+      gap: 12px;
+      color: #8B5CF6;
     }
     
     .btn-primary {
       background: linear-gradient(135deg, #2A6DF0, #8B5CF6);
-      padding: 12px 32px;
+      padding: 12px 28px;
       border-radius: 40px;
       font-weight: 600;
       color: white;
@@ -72,97 +307,85 @@
       border: none;
       text-decoration: none;
     }
+    
     .btn-primary:hover {
       transform: scale(1.03);
-      box-shadow: 0 12px 28px rgba(42, 109, 240, 0.5);
+      box-shadow: 0 12px 28px rgba(42, 109, 240, 0.4);
     }
     
-    .container {
-      max-width: 1300px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-    
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(16px);
-      background: rgba(5, 7, 10, 0.75);
-      border-bottom: 1px solid rgba(42, 109, 240, 0.2);
-    }
-    
-    .badge {
-      background: rgba(42,109,240,0.2);
-      padding: 4px 12px;
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid rgba(42, 109, 240, 0.7);
+      padding: 10px 24px;
       border-radius: 40px;
-      font-size: 0.7rem;
-      display: inline-block;
+      font-weight: 500;
+      color: #CBD5FF;
+      transition: all 0.3s;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
     }
     
+    .btn-outline:hover {
+      border-color: #2A6DF0;
+      background: rgba(42, 109, 240, 0.1);
+      color: white;
+    }
+    
+    /* Glass Card */
+    .glass-card {
+      background: rgba(10, 20, 35, 0.55);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(42, 109, 240, 0.2);
+      border-radius: 32px;
+      transition: all 0.4s ease;
+    }
+    
+    .glass-card:hover {
+      border-color: rgba(42, 109, 240, 0.6);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 35px -15px rgba(42, 109, 240, 0.3);
+    }
+    
+    /* Value Card */
     .value-card {
       text-align: center;
       padding: 32px;
       background: rgba(12, 20, 35, 0.6);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(66, 153, 225, 0.15);
-      border-radius: 32px;
+      border-radius: 28px;
       transition: all 0.4s ease;
     }
+    
     .value-card:hover {
       border-color: rgba(42, 109, 240, 0.5);
       transform: translateY(-6px);
     }
     
+    /* Milestone */
     .milestone {
       display: flex;
       align-items: center;
       gap: 20px;
-      padding: 24px;
+      padding: 20px 24px;
       background: rgba(12, 20, 35, 0.6);
       border-radius: 24px;
       transition: all 0.3s;
     }
+    
     .milestone:hover {
       background: rgba(42, 109, 240, 0.1);
       transform: translateX(5px);
     }
     
-    @media (max-width: 768px) {
-      .container { padding: 0 20px; }
-      .nav-links { display: none; }
-      .mobile-menu-btn { display: block; }
-      .hero-title { font-size: 2.5rem !important; }
-      .milestone { flex-direction: column; text-align: center; }
-    }
-    @media (max-width: 480px) {
-      .value-card { padding: 24px; }
-    }
-    
-    .mobile-menu-btn { display: none; font-size: 1.8rem; cursor: pointer; }
-    
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: #2A6DF0;
-      text-decoration: none;
-      margin-bottom: 24px;
-      font-weight: 500;
-      transition: 0.2s;
-    }
-    .back-link:hover { gap: 12px; color: #8B5CF6; }
-    
+    /* Stats Grid */
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 24px;
-    }
-    @media (max-width: 768px) {
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 480px) {
-      .stats-grid { grid-template-columns: 1fr; }
     }
     
     .stat-card {
@@ -171,46 +394,185 @@
       background: rgba(42, 109, 240, 0.05);
       border-radius: 24px;
       border: 1px solid rgba(42, 109, 240, 0.2);
+      transition: all 0.3s;
+    }
+    
+    .stat-card:hover {
+      background: rgba(42, 109, 240, 0.1);
+      transform: translateY(-3px);
+    }
+    
+    /* Founder Card */
+    .founder-card {
+      background: linear-gradient(135deg, rgba(42,109,240,0.1), rgba(139,92,246,0.1));
+      border: 1px solid rgba(42, 109, 240, 0.3);
+      border-radius: 32px;
+      padding: 40px;
+    }
+    
+    .skill-tag {
+      background: rgba(42, 109, 240, 0.2);
+      padding: 6px 14px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      display: inline-block;
+    }
+    
+    .badge {
+      background: rgba(42, 109, 240, 0.2);
+      padding: 4px 12px;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      display: inline-block;
+    }
+    
+    /* Reveal Animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+    
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Footer */
+    .footer {
+      border-top: 1px solid #1E2A3A;
+      padding: 50px 0 40px;
+      margin-top: 80px;
+    }
+    
+    /* Particles */
+    .particle-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    
+    .particle {
+      position: absolute;
+      background: rgba(42, 109, 240, 0.25);
+      border-radius: 50%;
+      filter: blur(3px);
+      animation: floatParticle 18s infinite alternate ease-in-out;
+    }
+    
+    @keyframes floatParticle {
+      0% { transform: translate(0, 0) scale(1); opacity: 0.2; }
+      100% { transform: translate(30px, -25px) scale(1.2); opacity: 0.6; }
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero-title { font-size: 2.5rem; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: block; }
+      
+      .hero { padding-top: 120px; min-height: auto; }
+      .hero-title { font-size: 1.8rem; }
+      
+      .container { padding: 0 20px; }
+      
+      .milestone { flex-direction: column; text-align: center; gap: 12px; }
+      
+      .founder-card { padding: 24px; }
+      .skill-tag { font-size: 0.7rem; padding: 4px 10px; }
+      
+      .stats-grid { gap: 16px; }
+      .stat-card { padding: 20px; }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-title { font-size: 1.5rem; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .value-card { padding: 24px; }
+      .founder-card { padding: 20px; }
     }
   </style>
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 16px 24px;">
-    <div style="display: flex; align-items: center; gap: 12px;">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png" alt="Logo" style="height: 38px; width: auto;">
-      <span style="font-weight: 800; font-size: 1.3rem;">RDS TEAM</span>
+<div class="particle-bg" id="particleContainer"></div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+  <div class="navbar-container">
+    <div class="logo">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png" alt="RDS TEAM Logo">
+      <span>RDS TEAM</span>
     </div>
-    <div class="nav-links" style="display: flex; gap: 32px; flex-wrap: wrap;">
-      <a href="index.html" style="color: #D1D9FF; text-decoration: none;">Home</a>
-      <a href="divisions.html" style="color: #D1D9FF; text-decoration: none;">Divisions</a>
-      <a href="products.html" style="color: #D1D9FF; text-decoration: none;">Products</a>
-      <a href="services.html" style="color: #D1D9FF; text-decoration: none;">Services</a>
-      <a href="portfolio.html" style="color: #D1D9FF; text-decoration: none;">Portfolio</a>
-      <a href="blog.html" style="color: #D1D9FF; text-decoration: none;">Blog</a>
-      <a href="about.html" style="color: #2A6DF0; text-decoration: none;">About</a>
-      <a href="contact.html" style="color: #D1D9FF; text-decoration: none;">Contact</a>
+    
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="divisions.html">Divisions</a>
+      <a href="products.html">Products</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <div class="dropdown">
+        <button class="dropbtn">More <i class="fas fa-chevron-down"></i></button>
+        <div class="dropdown-content">
+          <a href="blog.html">Blog</a>
+          <a href="about.html" class="active">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
     </div>
-    <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+    
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <i class="fas fa-bars"></i>
+    </button>
   </div>
 </nav>
 
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay" id="mobileMenuOverlay">
+  <div class="mobile-menu-header">
+    <span class="logo-text">RDS TEAM</span>
+    <button class="mobile-menu-close" id="closeMenuBtn">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="mobile-menu-links">
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="divisions.html"><i class="fas fa-layer-group"></i> Divisions</a>
+    <a href="products.html"><i class="fas fa-cube"></i> Products</a>
+    <a href="services.html"><i class="fas fa-cogs"></i> Services</a>
+    <a href="portfolio.html"><i class="fas fa-briefcase"></i> Portfolio</a>
+    <a href="blog.html"><i class="fas fa-newspaper"></i> Blog</a>
+    <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+    <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+  </div>
+  <div class="mobile-menu-footer">
+    <p>© 2025 RDS TEAM — Ecosystem Hub</p>
+  </div>
+</div>
+
 <main>
   <!-- Hero Section -->
-  <section style="padding: 60px 0 40px;">
+  <section class="hero">
     <div class="container">
-      <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+      <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
       <div class="reveal" style="text-align: center; max-width: 800px; margin: 0 auto;">
-        <span class="badge"><i class="fas fa-info-circle"></i> Who We Are</span>
-        <h1 class="hero-title" style="font-size: 3rem; font-weight: 800; margin-top: 24px; background: linear-gradient(135deg, #FFF, #8B5CF6, #2A6DF0); background-clip: text; -webkit-background-clip: text; color: transparent;">Building the Future Ecosystem</h1>
+        <span class="hero-badge"><i class="fas fa-info-circle"></i> Who We Are</span>
+        <h1 class="hero-title">Building the <span class="glow-text">Future Ecosystem</span></h1>
         <p style="color: #9ca3af; margin-top: 20px; font-size: 1.1rem;">RDS TEAM is a unified ecosystem connecting retail, technology, media, and training under one vision.</p>
       </div>
     </div>
   </section>
 
   <!-- Our Story -->
-  <section style="padding: 40px 0;">
+  <section style="padding: 60px 0;">
     <div class="container">
       <div class="reveal glass-card" style="padding: 48px;">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
@@ -225,6 +587,57 @@
             <p style="font-size: 1.2rem; font-style: italic; margin: 20px 0;">"One Team. Multiple Divisions. Infinite Possibilities."</p>
             <span class="badge">— RDS TEAM Philosophy</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder Section -->
+  <section style="padding: 60px 0;">
+    <div class="container">
+      <div class="reveal founder-card">
+        <div style="display: grid; grid-template-columns: auto 1fr; gap: 30px; align-items: start;">
+          <div style="text-align: center;">
+            <div style="background: linear-gradient(135deg, #2A6DF0, #8B5CF6); width: 120px; height: 120px; border-radius: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+              <i class="fas fa-user" style="font-size: 3rem; color: white;"></i>
+            </div>
+            <h3 style="font-size: 1.5rem; font-weight: 700;">Rajput Devdhar Singh</h3>
+            <p style="color: #2A6DF0;">Founder & CEO</p>
+            <p style="color: #9ca3af; font-size: 0.85rem;">BTech Computer Engineering</p>
+            <div style="margin-top: 16px;">
+              <span class="skill-tag"><i class="fas fa-birthday-cake"></i> Feb 9, 2008</span>
+            </div>
+          </div>
+          <div>
+            <h2 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 16px;">Meet Our Founder</h2>
+            <p style="color: #cbd5e1; line-height: 1.6;">Rajput Devdhar Singh is a BTech Computer Engineering student at Indus University with a deep passion for web development. He started his coding journey with a simple mission: to build tools that solve real problems for people.</p>
+            <p style="color: #cbd5e1; line-height: 1.6; margin-top: 16px;">The idea for ToolTari came when he realized that most online tools either require login, cost money, or compromise user privacy. He wanted to create a platform where anyone can edit PDFs and images instantly without uploading files to any server.</p>
+            <p style="color: #cbd5e1; line-height: 1.6; margin-top: 16px;">Today, ToolTari serves thousands of users with 40+ free tools that work completely in your browser. He is committed to expanding this platform and helping users worldwide with fast, secure, and accessible tools.</p>
+            <div style="margin-top: 24px;">
+              <a href="https://tooltari.in/founder.html" target="_blank" class="btn-outline"><i class="fas fa-external-link-alt"></i> Read Full Story</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Skills -->
+        <div style="margin-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 32px;">
+          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 16px;"><i class="fas fa-code"></i> Skills & Expertise</h3>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <span class="skill-tag">HTML5 & CSS3</span>
+            <span class="skill-tag">JavaScript (ES6+)</span>
+            <span class="skill-tag">Tool Development</span>
+            <span class="skill-tag">SEO Optimization</span>
+            <span class="skill-tag">PDF Processing</span>
+            <span class="skill-tag">Image Processing</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Node.js</span>
+          </div>
+        </div>
+        
+        <!-- Vision -->
+        <div style="margin-top: 24px;">
+          <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 12px;"><i class="fas fa-eye"></i> Founder's Vision</h3>
+          <p style="color: #cbd5e1;">"I believe that everyone should have access to powerful, easy-to-use tools without worrying about privacy or cost. My vision is to continue building free, browser-based tools that help people work smarter and faster."</p>
         </div>
       </div>
     </div>
@@ -369,42 +782,6 @@
     </div>
   </section>
 
-  <!-- Leadership / Team Section -->
-  <section style="padding: 60px 0 80px;">
-    <div class="container">
-      <div class="reveal" style="text-align: center; margin-bottom: 48px;">
-        <h2 style="font-size: 2rem; font-weight: 700;">Leadership</h2>
-        <p style="color: #9ca3af;">The team driving the vision forward</p>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
-        <div class="glass-card reveal" style="padding: 32px; text-align: center;">
-          <div style="background: linear-gradient(135deg, #2A6DF0, #8B5CF6); width: 120px; height: 120px; border-radius: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-            <i class="fas fa-user" style="font-size: 3rem; color: white;"></i>
-          </div>
-          <h3 style="font-size: 1.3rem; font-weight: 700;">RDS Founder</h3>
-          <p style="color: #2A6DF0; margin: 4px 0;">Founder & CEO</p>
-          <p style="color: #9ca3af; font-size: 0.85rem;">Visionary behind the RDS ecosystem</p>
-        </div>
-        <div class="glass-card reveal" style="padding: 32px; text-align: center;">
-          <div style="background: linear-gradient(135deg, #22c55e, #2A6DF0); width: 120px; height: 120px; border-radius: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-            <i class="fas fa-code" style="font-size: 3rem; color: white;"></i>
-          </div>
-          <h3 style="font-size: 1.3rem; font-weight: 700;">Tech Team</h3>
-          <p style="color: #22c55e; margin: 4px 0;">Engineering & Product</p>
-          <p style="color: #9ca3af; font-size: 0.85rem;">Building innovative solutions</p>
-        </div>
-        <div class="glass-card reveal" style="padding: 32px; text-align: center;">
-          <div style="background: linear-gradient(135deg, #f97316, #8B5CF6); width: 120px; height: 120px; border-radius: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-            <i class="fas fa-chart-line" style="font-size: 3rem; color: white;"></i>
-          </div>
-          <h3 style="font-size: 1.3rem; font-weight: 700;">Strategy Team</h3>
-          <p style="color: #f97316; margin: 4px 0;">Growth & Operations</p>
-          <p style="color: #9ca3af; font-size: 0.85rem;">Driving ecosystem expansion</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- CTA -->
   <section style="padding: 40px 0 80px;">
     <div class="container">
@@ -421,7 +798,7 @@
 </main>
 
 <!-- Footer -->
-<footer style="border-top: 1px solid #1E2A3A; padding: 50px 0 40px;">
+<footer class="footer">
   <div class="container">
     <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
       <div>
@@ -447,31 +824,85 @@
         <div>
           <h4 style="font-weight: 700;">Legal</h4>
           <ul style="margin-top: 12px; line-height: 1.8; list-style: none;">
-            <li><a href="#" style="color: #9ca3af; text-decoration: none;">Privacy Policy</a></li>
-            <li><a href="#" style="color: #9ca3af; text-decoration: none;">Terms & Conditions</a></li>
-            <li><a href="#" style="color: #9ca3af; text-decoration: none;">Disclaimer</a></li>
+            <li><a href="privacy.html" style="color: #9ca3af; text-decoration: none;">Privacy</a></li>
+            <li><a href="terms.html" style="color: #9ca3af; text-decoration: none;">Terms</a></li>
+            <li><a href="disclaimer.html" style="color: #9ca3af; text-decoration: none;">Disclaimer</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid #1f2937; text-align: center; font-size: 0.75rem; color: #6b7280;">
-      © 2025 RDS TEAM — Ecosystem Hub. Built for scalability. | <a href="index.html" style="color: #6b7280;">rdsteam.netlify.app</a>
+      © 2025 RDS TEAM — Ecosystem Hub. Built for scalability. | rdsteam.netlify.app
     </div>
   </div>
 </footer>
 
 <script>
+  // Particles
+  const particleContainer = document.getElementById('particleContainer');
+  for(let i = 0; i < 50; i++) {
+    let p = document.createElement('div');
+    p.classList.add('particle');
+    let size = Math.random() * 8 + 2;
+    p.style.width = size + 'px';
+    p.style.height = size + 'px';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.top = Math.random() * 100 + '%';
+    p.style.animationDelay = Math.random() * 20 + 's';
+    p.style.animationDuration = 15 + Math.random() * 25 + 's';
+    particleContainer.appendChild(p);
+  }
+  
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+  
   // Reveal animations
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); });
+    entries.forEach(entry => { 
+      if(entry.isIntersecting) entry.target.classList.add('active'); 
+    });
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
   
-  // Mobile menu
-  document.querySelector('.mobile-menu-btn')?.addEventListener('click', () => {
-    alert('Navigation: Home | Divisions | Products | Services | Portfolio | Blog | About | Contact');
-  });
+  // Mobile Menu
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+  const closeMenuBtn = document.getElementById('closeMenuBtn');
+  
+  if(mobileMenuBtn && mobileMenuOverlay) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenuOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+    
+    closeMenuBtn.addEventListener('click', () => {
+      mobileMenuOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+    
+    const mobileLinks = document.querySelectorAll('.mobile-menu-links a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+    
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
+        mobileMenuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
 </script>
 </body>
 </html>
