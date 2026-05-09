@@ -1,0 +1,25 @@
+# RDS TEAM - Robots.txt
+# This file instructs search engines how to crawl the website
+
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /temp/
+
+# Sitemap location
+Sitemap: https://rdsteam.netlify.app/sitemap.xml
+
+# Crawl delay (be polite to servers)
+Crawl-delay: 1
+
+# Google specific rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots (optional)
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
