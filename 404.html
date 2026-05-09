@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | RDS TEAM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #05070A;
+      color: #EDF2FF;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .error-container {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .error-code {
+      font-size: 8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #2A6DF0, #8B5CF6);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .error-title {
+      font-size: 2rem;
+      margin: 20px 0;
+    }
+    .error-text {
+      color: #9ca3af;
+      margin-bottom: 30px;
+    }
+    .btn-home {
+      background: linear-gradient(135deg, #2A6DF0, #8B5CF6);
+      padding: 12px 32px;
+      border-radius: 40px;
+      color: white;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: 0.3s;
+    }
+    .btn-home:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 28px rgba(42,109,240,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <div class="error-code">404</div>
+    <h1 class="error-title">Page Not Found</h1>
+    <p class="error-text">Oops! The page you're looking for doesn't exist or has been moved.</p>
+    <a href="index.html" class="btn-home"><i class="fas fa-home"></i> Back to Home</a>
+  </div>
+</body>
+</html>
