@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>About | RDS TEAM — Our Story & Mission</title>
+  <meta name="description" content="Learn about RDS TEAM's journey, mission, vision, and values. We're building a futuristic ecosystem connecting retail, technology, media, and training.">
+  <meta name="keywords" content="about RDS TEAM, mission, vision, values, ecosystem, team story">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png">
+  <link rel="apple-touch-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="RDS TEAM — About Us">
+  <meta property="og:description" content="Discover the story behind RDS TEAM, our mission to build a connected ecosystem, and our vision for the future.">
+  <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png">
+  <meta property="og:url" content="https://rdsteam.netlify.app/about.html">
+  
+  <link rel="canonical" href="https://rdsteam.netlify.app/about.html">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #05070A;
+      color: #EDF2FF;
+      overflow-x: hidden;
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0A0F1A; }
+    ::-webkit-scrollbar-thumb { background: #2A6DF0; border-radius: 10px; }
+    
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    
+    .glass-card {
+      background: rgba(10, 20, 35, 0.55);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(42, 109, 240, 0.2);
+      border-radius: 32px;
+      transition: all 0.4s ease;
+    }
+    .glass-card:hover {
+      border-color: rgba(42, 109, 240, 0.6);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 35px -15px rgba(42, 109, 240, 0.3);
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #2A6DF0, #8B5CF6);
+      padding: 12px 32px;
+      border-radius: 40px;
+      font-weight: 600;
+      color: white;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: none;
+      text-decoration: none;
+    }
+    .btn-primary:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 28px rgba(42, 109, 240, 0.5);
+    }
+    
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      background: rgba(5, 7, 10, 0.75);
+      border-bottom: 1px solid rgba(42, 109, 240, 0.2);
+    }
+    
+    .badge {
+      background: rgba(42,109,240,0.2);
+      padding: 4px 12px;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      display: inline-block;
+    }
+    
+    .value-card {
+      text-align: center;
+      padding: 32px;
+      background: rgba(12, 20, 35, 0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(66, 153, 225, 0.15);
+      border-radius: 32px;
+      transition: all 0.4s ease;
+    }
+    .value-card:hover {
+      border-color: rgba(42, 109, 240, 0.5);
+      transform: translateY(-6px);
+    }
+    
+    .milestone {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 24px;
+      background: rgba(12, 20, 35, 0.6);
+      border-radius: 24px;
+      transition: all 0.3s;
+    }
+    .milestone:hover {
+      background: rgba(42, 109, 240, 0.1);
+      transform: translateX(5px);
+    }
+    
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; }
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: block; }
+      .hero-title { font-size: 2.5rem !important; }
+      .milestone { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .value-card { padding: 24px; }
+    }
+    
+    .mobile-menu-btn { display: none; font-size: 1.8rem; cursor: pointer; }
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #2A6DF0;
+      text-decoration: none;
+      margin-bottom: 24px;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .back-link:hover { gap: 12px; color: #8B5CF6; }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 768px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .stats-grid { grid-template-columns: 1fr; }
+    }
+    
+    .stat-card {
+      text-align: center;
+      padding: 28px;
+      background: rgba(42, 109, 240, 0.05);
+      border-radius: 24px;
+      border: 1px solid rgba(42, 109, 240, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 16px 24px;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png" alt="Logo" style="height: 38px; width: auto;">
+      <span style="font-weight: 800; font-size: 1.3rem;">RDS TEAM</span>
+    </div>
+    <div class="nav-links" style="display: flex; gap: 32px; flex-wrap: wrap;">
+      <a href="index.html" style="color: #D1D9FF; text-decoration: none;">Home</a>
+      <a href="divisions.html" style="color: #D1D9FF; text-decoration: none;">Divisions</a>
+      <a href="products.html" style="color: #D1D9FF; text-decoration: none;">Products</a>
+      <a href="services.html" style="color: #D1D9FF; text-decoration: none;">Services</a>
+      <a href="portfolio.html" style="color: #D1D9FF; text-decoration: none;">Portfolio</a>
+      <a href="blog.html" style="color: #D1D9FF; text-decoration: none;">Blog</a>
+      <a href="about.html" style="color: #2A6DF0; text-decoration: none;">About</a>
+      <a href="contact.html" style="color: #D1D9FF; text-decoration: none;">Contact</a>
+    </div>
+    <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+  </div>
+</nav>
+
+<main>
+  <!-- Hero Section -->
+  <section style="padding: 60px 0 40px;">
+    <div class="container">
+      <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+      <div class="reveal" style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <span class="badge"><i class="fas fa-info-circle"></i> Who We Are</span>
+        <h1 class="hero-title" style="font-size: 3rem; font-weight: 800; margin-top: 24px; background: linear-gradient(135deg, #FFF, #8B5CF6, #2A6DF0); background-clip: text; -webkit-background-clip: text; color: transparent;">Building the Future Ecosystem</h1>
+        <p style="color: #9ca3af; margin-top: 20px; font-size: 1.1rem;">RDS TEAM is a unified ecosystem connecting retail, technology, media, and training under one vision.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section style="padding: 40px 0;">
+    <div class="container">
+      <div class="reveal glass-card" style="padding: 48px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;">
+          <div>
+            <span class="badge"><i class="fas fa-history"></i> Our Journey</span>
+            <h2 style="font-size: 2rem; font-weight: 700; margin: 16px 0;">The RDS Story</h2>
+            <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 16px;">Founded with a vision to create a connected digital ecosystem, RDS TEAM started as a small technology venture and has grown into a multi-division powerhouse.</p>
+            <p style="color: #cbd5e1; line-height: 1.6;">Today, we operate across retail, technology, media, and training sectors — all united under one brand, one mission, and one future.</p>
+          </div>
+          <div style="background: linear-gradient(135deg, #2A6DF020, #8B5CF620); border-radius: 32px; padding: 40px; text-align: center;">
+            <i class="fas fa-quote-right" style="font-size: 3rem; color: #2A6DF0; opacity: 0.5;"></i>
+            <p style="font-size: 1.2rem; font-style: italic; margin: 20px 0;">"One Team. Multiple Divisions. Infinite Possibilities."</p>
+            <span class="badge">— RDS TEAM Philosophy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section style="padding: 60px 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+        <div class="reveal glass-card" style="padding: 40px; text-align: center;">
+          <div style="background: #2A6DF020; width: 80px; height: 80px; border-radius: 40px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+            <i class="fas fa-bullseye" style="font-size: 2.5rem; color: #2A6DF0;"></i>
+          </div>
+          <h3 style="font-size: 1.8rem; font-weight: 700;">Our Mission</h3>
+          <p style="color: #cbd5e1; margin-top: 16px;">To build innovative digital solutions that empower businesses and individuals, creating a seamless ecosystem where technology meets everyday needs.</p>
+        </div>
+        <div class="reveal glass-card" style="padding: 40px; text-align: center;">
+          <div style="background: #8B5CF620; width: 80px; height: 80px; border-radius: 40px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+            <i class="fas fa-eye" style="font-size: 2.5rem; color: #8B5CF6;"></i>
+          </div>
+          <h3 style="font-size: 1.8rem; font-weight: 700;">Our Vision</h3>
+          <p style="color: #cbd5e1; margin-top: 16px;">To become India's most trusted digital ecosystem, connecting retail, technology, media, and training for a smarter, more connected future.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values -->
+  <section style="padding: 60px 0;">
+    <div class="container">
+      <div class="reveal" style="text-align: center; margin-bottom: 48px;">
+        <h2 style="font-size: 2rem; font-weight: 700;">Our Core Values</h2>
+        <p style="color: #9ca3af;">The principles that guide everything we do</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 28px;">
+        <div class="value-card reveal">
+          <i class="fas fa-medal" style="font-size: 2.5rem; color: #2A6DF0;"></i>
+          <h3 style="font-size: 1.3rem; font-weight: 700; margin: 16px 0;">Excellence</h3>
+          <p style="color: #cbd5e1;">We strive for perfection in every product and service we deliver.</p>
+        </div>
+        <div class="value-card reveal">
+          <i class="fas fa-lightbulb" style="font-size: 2.5rem; color: #f97316;"></i>
+          <h3 style="font-size: 1.3rem; font-weight: 700; margin: 16px 0;">Innovation</h3>
+          <p style="color: #cbd5e1;">We embrace cutting-edge technology and creative solutions.</p>
+        </div>
+        <div class="value-card reveal">
+          <i class="fas fa-handshake" style="font-size: 2.5rem; color: #22c55e;"></i>
+          <h3 style="font-size: 1.3rem; font-weight: 700; margin: 16px 0;">Integrity</h3>
+          <p style="color: #cbd5e1;">We operate with transparency, honesty, and ethical practices.</p>
+        </div>
+        <div class="value-card reveal">
+          <i class="fas fa-users" style="font-size: 2.5rem; color: #8B5CF6;"></i>
+          <h3 style="font-size: 1.3rem; font-weight: 700; margin: 16px 0;">Collaboration</h3>
+          <p style="color: #cbd5e1;">We believe in the power of teamwork and shared success.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section style="padding: 60px 0;">
+    <div class="container">
+      <div class="reveal stats-grid">
+        <div class="stat-card">
+          <i class="fas fa-store" style="font-size: 2rem; color: #22c55e;"></i>
+          <h3 style="font-size: 2rem; font-weight: 800; margin: 12px 0;">4+</h3>
+          <p style="color: #9ca3af;">Active Divisions</p>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-cube" style="font-size: 2rem; color: #2A6DF0;"></i>
+          <h3 style="font-size: 2rem; font-weight: 800; margin: 12px 0;">10+</h3>
+          <p style="color: #9ca3af;">Products & Platforms</p>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-users" style="font-size: 2rem; color: #8B5CF6;"></i>
+          <h3 style="font-size: 2rem; font-weight: 800; margin: 12px 0;">15K+</h3>
+          <p style="color: #9ca3af;">Active Users</p>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-calendar-check" style="font-size: 2rem; color: #f97316;"></i>
+          <h3 style="font-size: 2rem; font-weight: 800; margin: 12px 0;">50+</h3>
+          <p style="color: #9ca3af;">Projects Completed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Milestones Timeline -->
+  <section style="padding: 60px 0;">
+    <div class="container">
+      <div class="reveal" style="text-align: center; margin-bottom: 48px;">
+        <h2 style="font-size: 2rem; font-weight: 700;">Key Milestones</h2>
+        <p style="color: #9ca3af;">Our journey so far</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div class="milestone reveal">
+          <div style="background: #2A6DF020; padding: 12px 20px; border-radius: 40px; min-width: 120px; text-align: center;">
+            <span style="font-weight: 700;">2022</span>
+          </div>
+          <div>
+            <h3 style="font-weight: 700;">RDS TEAM Founded</h3>
+            <p style="color: #9ca3af;">Started as a technology venture with a vision for ecosystem building.</p>
+          </div>
+        </div>
+        <div class="milestone reveal">
+          <div style="background: #22c55e20; padding: 12px 20px; border-radius: 40px; min-width: 120px; text-align: center;">
+            <span style="font-weight: 700;">2023</span>
+          </div>
+          <div>
+            <h3 style="font-weight: 700;">First Product Launch</h3>
+            <p style="color: #9ca3af;">Launched OKmart and ToolTari, marking our entry into retail and SaaS.</p>
+          </div>
+        </div>
+        <div class="milestone reveal">
+          <div style="background: #f9731620; padding: 12px 20px; border-radius: 40px; min-width: 120px; text-align: center;">
+            <span style="font-weight: 700;">2024</span>
+          </div>
+          <div>
+            <h3 style="font-weight: 700;">Ecosystem Expansion</h3>
+            <p style="color: #9ca3af;">Added RDS Media and HRF Group divisions to the ecosystem.</p>
+          </div>
+        </div>
+        <div class="milestone reveal">
+          <div style="background: #8B5CF620; padding: 12px 20px; border-radius: 40px; min-width: 120px; text-align: center;">
+            <span style="font-weight: 700;">2025</span>
+          </div>
+          <div>
+            <h3 style="font-weight: 700;">Unified Brand Launch</h3>
+            <p style="color: #9ca3af;">Launched the official RDS TEAM ecosystem hub website.</p>
+          </div>
+        </div>
+        <div class="milestone reveal">
+          <div style="background: #2A6DF020; padding: 12px 20px; border-radius: 40px; min-width: 120px; text-align: center;">
+            <span style="font-weight: 700;">2026+</span>
+          </div>
+          <div>
+            <h3 style="font-weight: 700;">Future Ready</h3>
+            <p style="color: #9ca3af;">Expanding into AI, Cloud, and next-generation platforms.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership / Team Section -->
+  <section style="padding: 60px 0 80px;">
+    <div class="container">
+      <div class="reveal" style="text-align: center; margin-bottom: 48px;">
+        <h2 style="font-size: 2rem; font-weight: 700;">Leadership</h2>
+        <p style="color: #9ca3af;">The team driving the vision forward</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
+        <div class="glass-card reveal" style="padding: 32px; text-align: center;">
+          <div style="background: linear-gradient(135deg, #2A6DF0, #8B5CF6); width: 120px; height: 120px; border-radius: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+            <i class="fas fa-user" style="font-size: 3rem; color: white;"></i>
+          </div>
+          <h3 style="font-size: 1.3rem; font-weight: 700;">RDS Founder</h3>
+          <p style="color: #2A6DF0; margin: 4px 0;">Founder & CEO</p>
+          <p style="color: #9ca3af; font-size: 0.85rem;">Visionary behind the RDS ecosystem</p>
+        </div>
+        <div class="glass-card reveal" style="padding: 32px; text-align: center;">
+          <div style="background: linear-gradient(135deg, #22c55e, #2A6DF0); width: 120px; height: 120px; border-radius: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+            <i class="fas fa-code" style="font-size: 3rem; color: white;"></i>
+          </div>
+          <h3 style="font-size: 1.3rem; font-weight: 700;">Tech Team</h3>
+          <p style="color: #22c55e; margin: 4px 0;">Engineering & Product</p>
+          <p style="color: #9ca3af; font-size: 0.85rem;">Building innovative solutions</p>
+        </div>
+        <div class="glass-card reveal" style="padding: 32px; text-align: center;">
+          <div style="background: linear-gradient(135deg, #f97316, #8B5CF6); width: 120px; height: 120px; border-radius: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+            <i class="fas fa-chart-line" style="font-size: 3rem; color: white;"></i>
+          </div>
+          <h3 style="font-size: 1.3rem; font-weight: 700;">Strategy Team</h3>
+          <p style="color: #f97316; margin: 4px 0;">Growth & Operations</p>
+          <p style="color: #9ca3af; font-size: 0.85rem;">Driving ecosystem expansion</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding: 40px 0 80px;">
+    <div class="container">
+      <div class="reveal glass-card" style="padding: 48px; text-align: center;">
+        <i class="fas fa-handshake" style="font-size: 3rem; color: #2A6DF0; margin-bottom: 20px;"></i>
+        <h2 style="font-size: 1.8rem; font-weight: 700;">Become Part of Our Journey</h2>
+        <p style="color: #cbd5e1; max-width: 500px; margin: 16px auto;">Whether you're a client, partner, or team member — let's build the future together.</p>
+        <div style="margin-top: 24px;">
+          <a href="contact.html" class="btn-primary"><i class="fas fa-envelope"></i> Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer style="border-top: 1px solid #1E2A3A; padding: 50px 0 40px;">
+  <div class="container">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
+      <div>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGyK2_7WjbZwBhFOY_X5HpweWQHGD7kjrgxi0bzYugPn14r5FWqL5_ADwtg8dRJXZT_0Qn90QzDpbfpvb7sg78np0IbA2s7Jl5rnliBKYcFYsteF7TU2BLFrtgUERaUX9dmFPGrtexO_3_WUNSKmZUmU2XFLZWoXlUMnNYdrGOD0U8xcXPmoGNOuia/s320-rw/rds.gif" style="height: 55px; border-radius: 12px;" alt="Animated Logo">
+      </div>
+      <div style="display: flex; gap: 60px; flex-wrap: wrap;">
+        <div>
+          <h4 style="font-weight: 700;">Quick Links</h4>
+          <ul style="margin-top: 12px; line-height: 1.8; list-style: none;">
+            <li><a href="index.html" style="color: #9ca3af; text-decoration: none;">Home</a></li>
+            <li><a href="about.html" style="color: #2A6DF0; text-decoration: none;">About</a></li>
+            <li><a href="contact.html" style="color: #9ca3af; text-decoration: none;">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="font-weight: 700;">Ecosystem</h4>
+          <ul style="margin-top: 12px; line-height: 1.8; list-style: none;">
+            <li><a href="divisions.html" style="color: #9ca3af; text-decoration: none;">Divisions</a></li>
+            <li><a href="products.html" style="color: #9ca3af; text-decoration: none;">Products</a></li>
+            <li><a href="services.html" style="color: #9ca3af; text-decoration: none;">Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="font-weight: 700;">Legal</h4>
+          <ul style="margin-top: 12px; line-height: 1.8; list-style: none;">
+            <li><a href="#" style="color: #9ca3af; text-decoration: none;">Privacy Policy</a></li>
+            <li><a href="#" style="color: #9ca3af; text-decoration: none;">Terms & Conditions</a></li>
+            <li><a href="#" style="color: #9ca3af; text-decoration: none;">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid #1f2937; text-align: center; font-size: 0.75rem; color: #6b7280;">
+      © 2025 RDS TEAM — Ecosystem Hub. Built for scalability. | <a href="index.html" style="color: #6b7280;">rdsteam.netlify.app</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal animations
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+  
+  // Mobile menu
+  document.querySelector('.mobile-menu-btn')?.addEventListener('click', () => {
+    alert('Navigation: Home | Divisions | Products | Services | Portfolio | Blog | About | Contact');
+  });
+</script>
+</body>
+</html>
