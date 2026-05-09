@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Blog | RDS TEAM — Updates & Insights</title>
+  <meta name="description" content="Latest updates, announcements, and insights from RDS TEAM ecosystem. News about products, divisions, and future projects.">
+  <meta name="keywords" content="RDS blog, updates, announcements, ecosystem news, ToolTari updates, OKmart news">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png">
+  <link rel="apple-touch-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="RDS TEAM Blog — Latest Ecosystem Updates">
+  <meta property="og:description" content="Stay updated with RDS TEAM's latest news, product launches, and industry insights.">
+  <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png">
+  <meta property="og:url" content="https://rdsteam.netlify.app/blog.html">
+  
+  <link rel="canonical" href="https://rdsteam.netlify.app/blog.html">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #05070A;
+      color: #EDF2FF;
+      overflow-x: hidden;
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0A0F1A; }
+    ::-webkit-scrollbar-thumb { background: #2A6DF0; border-radius: 10px; }
+    
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    
+    .glass-card {
+      background: rgba(10, 20, 35, 0.55);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(42, 109, 240, 0.2);
+      border-radius: 32px;
+      transition: all 0.4s ease;
+    }
+    .glass-card:hover {
+      border-color: rgba(42, 109, 240, 0.6);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 35px -15px rgba(42, 109, 240, 0.3);
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #2A6DF0, #8B5CF6);
+      padding: 12px 32px;
+      border-radius: 40px;
+      font-weight: 600;
+      color: white;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(42, 109, 240, 0.3);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: none;
+      text-decoration: none;
+    }
+    .btn-primary:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 28px rgba(42, 109, 240, 0.5);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid rgba(42, 109, 240, 0.7);
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-weight: 500;
+      color: #CBD5FF;
+      transition: all 0.3s;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+    .btn-outline:hover {
+      border-color: #2A6DF0;
+      background: rgba(42, 109, 240, 0.1);
+      color: white;
+    }
+    
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      background: rgba(5, 7, 10, 0.75);
+      border-bottom: 1px solid rgba(42, 109, 240, 0.2);
+    }
+    
+    .blog-card {
+      background: rgba(12, 20, 35, 0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(66, 153, 225, 0.15);
+      border-radius: 32px;
+      transition: all 0.4s ease;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .blog-card:hover {
+      border-color: rgba(42, 109, 240, 0.5);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 35px -15px rgba(42, 109, 240, 0.3);
+    }
+    
+    .category-tag {
+      background: rgba(42,109,240,0.2);
+      padding: 4px 12px;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      display: inline-block;
+    }
+    
+    .badge {
+      background: rgba(42,109,240,0.2);
+      padding: 4px 12px;
+      border-radius: 40px;
+      font-size: 0.7rem;
+    }
+    
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; }
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: block; }
+      .hero-title { font-size: 2.2rem !important; }
+    }
+    @media (max-width: 480px) {
+      .blog-card { margin: 0 0 20px 0; }
+    }
+    
+    .mobile-menu-btn { display: none; font-size: 1.8rem; cursor: pointer; }
+    
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #2A6DF0;
+      text-decoration: none;
+      margin-bottom: 24px;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .back-link:hover { gap: 12px; color: #8B5CF6; }
+    
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      backdrop-filter: blur(20px);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .modal.active {
+      display: flex;
+    }
+    .modal-content {
+      max-width: 800px;
+      max-height: 90vh;
+      overflow-y: auto;
+      background: #0A0F1A;
+      border-radius: 32px;
+      padding: 40px;
+      border: 1px solid rgba(42,109,240,0.3);
+    }
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+      transition: 0.3s;
+    }
+    .modal-close:hover { color: #2A6DF0; }
+    
+    @media (max-width: 768px) {
+      .modal-content { padding: 24px; margin: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 16px 24px;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png" alt="Logo" style="height: 38px; width: auto;">
+      <span style="font-weight: 800; font-size: 1.3rem;">RDS TEAM</span>
+    </div>
+    <div class="nav-links" style="display: flex; gap: 32px; flex-wrap: wrap;">
+      <a href="index.html" style="color: #D1D9FF; text-decoration: none;">Home</a>
+      <a href="divisions.html" style="color: #D1D9FF; text-decoration: none;">Divisions</a>
+      <a href="products.html" style="color: #D1D9FF; text-decoration: none;">Products</a>
+      <a href="services.html" style="color: #D1D9FF; text-decoration: none;">Services</a>
+      <a href="portfolio.html" style="color: #D1D9FF; text-decoration: none;">Portfolio</a>
+      <a href="blog.html" style="color: #2A6DF0; text-decoration: none;">Blog</a>
+      <a href="contact.html" style="color: #D1D9FF; text-decoration: none;">Contact</a>
+    </div>
+    <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+  </div>
+</nav>
+
+<main>
+  <!-- Hero Section -->
+  <section style="padding: 60px 0 40px;">
+    <div class="container">
+      <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+      <div class="reveal" style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <span class="badge"><i class="fas fa-newspaper"></i> Insights & Updates</span>
+        <h1 class="hero-title" style="font-size: 3rem; font-weight: 800; margin-top: 24px; background: linear-gradient(135deg, #FFF, #8B5CF6, #2A6DF0); background-clip: text; -webkit-background-clip: text; color: transparent;">Latest from RDS Ecosystem</h1>
+        <p style="color: #9ca3af; margin-top: 20px; font-size: 1.1rem;">News, announcements, and insights from our team.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Post -->
+  <section style="padding: 20px 0 40px;">
+    <div class="container">
+      <div class="reveal glass-card" style="padding: 0; overflow: hidden; display: grid; grid-template-columns: 1fr 1.5fr;">
+        <div style="background: linear-gradient(135deg, #2A6DF0, #8B5CF6); padding: 40px; display: flex; flex-direction: column; justify-content: center;">
+          <span class="category-tag" style="background: rgba(255,255,255,0.2); color: white;">⭐ Featured</span>
+          <h2 style="font-size: 1.8rem; font-weight: 700; margin: 16px 0;">RDS TEAM Website Launch</h2>
+          <p style="color: rgba(255,255,255,0.9);">Our new ecosystem hub is live! Explore divisions, products, and services under one roof.</p>
+          <div style="margin-top: 24px; display: flex; gap: 16px; align-items: center;">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png" style="width: 40px; height: 40px; border-radius: 50%;">
+            <div><span style="font-weight: 600;">RDS TEAM</span><br><span style="font-size: 0.7rem;">May 9, 2026</span></div>
+          </div>
+        </div>
+        <div style="background: rgba(12,20,35,0.8); padding: 40px; display: flex; align-items: center; justify-content: center;">
+          <i class="fas fa-rocket" style="font-size: 5rem; color: #2A6DF0; opacity: 0.5;"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Grid -->
+  <section style="padding: 40px 0 80px;">
+    <div class="container">
+      <div class="reveal" style="margin-bottom: 40px;">
+        <h2 style="font-size: 1.8rem; font-weight: 700;">All Articles</h2>
+        <p style="color: #9ca3af;">Stay updated with our latest content</p>
+      </div>
+      
+      <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px;">
+        
+        <!-- Blog Post 1 -->
+        <div class="blog-card reveal" onclick="openModal(1)">
+          <div style="padding: 28px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+              <span class="category-tag"><i class="fas fa-rocket"></i> Announcement</span>
+              <span style="font-size: 0.7rem; color: #9ca3af;">May 9, 2026</span>
+            </div>
+            <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 12px;">Welcome to the New RDS TEAM Ecosystem</h3>
+            <p style="color: #cbd5e1; margin-bottom: 20px;">We're excited to announce the launch of our unified ecosystem hub, bringing together all divisions under one digital roof...</p>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <i class="fas fa-user-circle" style="color: #2A6DF0;"></i>
+              <span style="font-size: 0.8rem;">RDS Team</span>
+              <span style="margin-left: auto;"><i class="fas fa-clock"></i> 3 min read</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Blog Post 2 -->
+        <div class="blog-card reveal" onclick="openModal(2)">
+          <div style="padding: 28px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+              <span class="category-tag"><i class="fas fa-cube"></i> Product</span>
+              <span style="font-size: 0.7rem; color: #9ca3af;">May 5, 2026</span>
+            </div>
+            <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 12px;">ToolTari v2.0: New Features Announced</h3>
+            <p style="color: #cbd5e1; margin-bottom: 20px;">ToolTari is getting a major upgrade with new productivity tools, API integrations, and a redesigned dashboard...</p>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <i class="fas fa-user-circle" style="color: #2A6DF0;"></i>
+              <span style="font-size: 0.8rem;">Product Team</span>
+              <span style="margin-left: auto;"><i class="fas fa-clock"></i> 4 min read</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Blog Post 3 -->
+        <div class="blog-card reveal" onclick="openModal(3)">
+          <div style="padding: 28px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+              <span class="category-tag"><i class="fas fa-chart-line"></i> Milestone</span>
+              <span style="font-size: 0.7rem; color: #9ca3af;">April 28, 2026</span>
+            </div>
+            <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 12px;">OKmart Crosses 10,000 Active Users</h3>
+            <p style="color: #cbd5e1; margin-bottom: 20px;">Our retail platform OKmart has achieved a major milestone, serving over 10,000 satisfied customers across India...</p>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <i class="fas fa-user-circle" style="color: #2A6DF0;"></i>
+              <span style="font-size: 0.8rem;">RDS Group</span>
+              <span style="margin-left: auto;"><i class="fas fa-clock"></i> 2 min read</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Blog Post 4 -->
+        <div class="blog-card reveal" onclick="openModal(4)">
+          <div style="padding: 28px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+              <span class="category-tag"><i class="fas fa-eye"></i> Future Vision</span>
+              <span style="font-size: 0.7rem; color: #9ca3af;">April 20, 2026</span>
+            </div>
+            <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 12px;">Introducing RDS AI: Our Vision for 2026</h3>
+            <p style="color: #cbd5e1; margin-bottom: 20px;">We're building an AI-powered analytics platform that will transform how businesses make data-driven decisions...</p>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <i class="fas fa-user-circle" style="color: #2A6DF0;"></i>
+              <span style="font-size: 0.8rem;">R&D Team</span>
+              <span style="margin-left: auto;"><i class="fas fa-clock"></i> 5 min read</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Blog Post 5 -->
+        <div class="blog-card reveal" onclick="openModal(5)">
+          <div style="padding: 28px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+              <span class="category-tag"><i class="fas fa-bullhorn"></i> Community</span>
+              <span style="font-size: 0.7rem; color: #9ca3af;">April 15, 2026</span>
+            </div>
+            <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 12px;">HRF Group Launches Leadership Program</h3>
+            <p style="color: #cbd5e1; margin-bottom: 20px;">New training initiative focused on developing future leaders in technology and business management...</p>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <i class="fas fa-user-circle" style="color: #2A6DF0;"></i>
+              <span style="font-size: 0.8rem;">HRF Group</span>
+              <span style="margin-left: auto;"><i class="fas fa-clock"></i> 3 min read</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Blog Post 6 -->
+        <div class="blog-card reveal" onclick="openModal(6)">
+          <div style="padding: 28px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+              <span class="category-tag"><i class="fas fa-code"></i> Tech</span>
+              <span style="font-size: 0.7rem; color: #9ca3af;">April 10, 2026</span>
+            </div>
+            <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 12px;">Our Tech Stack: Building for Scale</h3>
+            <p style="color: #cbd5e1; margin-bottom: 20px;">A deep dive into the technologies powering the RDS ecosystem and why we chose them for scalability...</p>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <i class="fas fa-user-circle" style="color: #2A6DF0;"></i>
+              <span style="font-size: 0.8rem;">Engineering</span>
+              <span style="margin-left: auto;"><i class="fas fa-clock"></i> 6 min read</span>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section style="padding: 40px 0 80px;">
+    <div class="container">
+      <div class="reveal glass-card" style="padding: 48px; text-align: center;">
+        <i class="fas fa-envelope-open-text" style="font-size: 3rem; color: #2A6DF0; margin-bottom: 20px;"></i>
+        <h2 style="font-size: 1.8rem; font-weight: 700;">Subscribe to Our Newsletter</h2>
+        <p style="color: #cbd5e1; max-width: 500px; margin: 16px auto;">Get the latest updates directly in your inbox.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-top: 24px;">
+          <input type="email" placeholder="Your email address" id="newsletterEmail" class="form-input" style="max-width: 300px;">
+          <button class="btn-primary" onclick="subscribeNewsletter()"><i class="fas fa-paper-plane"></i> Subscribe</button>
+        </div>
+        <p id="newsletterMsg" style="font-size: 0.8rem; margin-top: 16px;"></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Modal for Blog Posts -->
+<div id="blogModal" class="modal">
+  <span class="modal-close" onclick="closeModal()">&times;</span>
+  <div class="modal-content" id="modalContent">
+    <!-- Dynamic content loads here -->
+  </div>
+</div>
+
+<!-- Footer -->
+<footer style="border-top: 1px solid #1E2A3A; padding: 50px 0 40px;">
+  <div class="container">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
+      <div>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGyK2_7WjbZwBhFOY_X5HpweWQHGD7kjrgxi0bzYugPn14r5FWqL5_ADwtg8dRJXZT_0Qn90QzDpbfpvb7sg78np0IbA2s7Jl5rnliBKYcFYsteF7TU2BLFrtgUERaUX9dmFPGrtexO_3_WUNSKmZUmU2XFLZWoXlUMnNYdrGOD0U8xcXPmoGNOuia/s320-rw/rds.gif" style="height: 55px; border-radius: 12px;" alt="Animated Logo">
+      </div>
+      <div style="display: flex; gap: 60px; flex-wrap: wrap;">
+        <div>
+          <h4 style="font-weight: 700;">Quick Links</h4>
+          <ul style="margin-top: 12px; line-height: 1.8; list-style: none;">
+            <li><a href="index.html" style="color: #9ca3af; text-decoration: none;">Home</a></li>
+            <li><a href="divisions.html" style="color: #9ca3af; text-decoration: none;">Divisions</a></li>
+            <li><a href="products.html" style="color: #9ca3af; text-decoration: none;">Products</a></li>
+            <li><a href="services.html" style="color: #9ca3af; text-decoration: none;">Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="font-weight: 700;">Resources</h4>
+          <ul style="margin-top: 12px; line-height: 1.8; list-style: none;">
+            <li><a href="portfolio.html" style="color: #9ca3af; text-decoration: none;">Portfolio</a></li>
+            <li><a href="blog.html" style="color: #2A6DF0; text-decoration: none;">Blog</a></li>
+            <li><a href="contact.html" style="color: #9ca3af; text-decoration: none;">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="font-weight: 700;">Legal</h4>
+          <ul style="margin-top: 12px; line-height: 1.8; list-style: none;">
+            <li><a href="#" style="color: #9ca3af; text-decoration: none;">Privacy Policy</a></li>
+            <li><a href="#" style="color: #9ca3af; text-decoration: none;">Terms & Conditions</a></li>
+            <li><a href="#" style="color: #9ca3af; text-decoration: none;">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid #1f2937; text-align: center; font-size: 0.75rem; color: #6b7280;">
+      © 2025 RDS TEAM — Ecosystem Hub. Built for scalability. | <a href="index.html" style="color: #6b7280;">rdsteam.netlify.app</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Blog posts data
+  const blogPosts = {
+    1: { title: "Welcome to the New RDS TEAM Ecosystem", date: "May 9, 2026", author: "RDS Team", content: "We're excited to announce the launch of our unified ecosystem hub, bringing together all divisions under one digital roof. This website represents our commitment to transparency, innovation, and community. Explore our divisions, products, and services to see what we're building." },
+    2: { title: "ToolTari v2.0: New Features Announced", date: "May 5, 2026", author: "Product Team", content: "ToolTari is getting a major upgrade with new productivity tools, API integrations, and a redesigned dashboard. Users can expect better performance, more utilities, and seamless integration with third-party services. Beta access available for early adopters." },
+    3: { title: "OKmart Crosses 10,000 Active Users", date: "April 28, 2026", author: "RDS Group", content: "Our retail platform OKmart has achieved a major milestone, serving over 10,000 satisfied customers across India. This growth validates our vision for smart retail and grocery delivery. We're expanding to new cities this quarter." },
+    4: { title: "Introducing RDS AI: Our Vision for 2026", date: "April 20, 2026", author: "R&D Team", content: "We're building an AI-powered analytics platform that will transform how businesses make data-driven decisions. RDS AI will feature predictive models, automated insights, and natural language querying. Development is underway for a Q3 2026 release." },
+    5: { title: "HRF Group Launches Leadership Program", date: "April 15, 2026", author: "HRF Group", content: "New training initiative focused on developing future leaders in technology and business management. The program includes workshops, mentorship, and real-world projects. Applications are now open for the first cohort." },
+    6: { title: "Our Tech Stack: Building for Scale", date: "April 10, 2026", author: "Engineering", content: "A deep dive into the technologies powering the RDS ecosystem: Next.js for frontend, Node.js for backend, MongoDB and PostgreSQL for data, and cloud deployment on Netlify. We prioritize performance, security, and developer experience." }
+  };
+  
+  function openModal(id) {
+    const post = blogPosts[id];
+    const modal = document.getElementById('blogModal');
+    const modalContent = document.getElementById('modalContent');
+    modalContent.innerHTML = `
+      <h2 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 12px;">${post.title}</h2>
+      <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 24px;">
+        <span class="category-tag"><i class="fas fa-calendar"></i> ${post.date}</span>
+        <span class="category-tag"><i class="fas fa-user"></i> ${post.author}</span>
+      </div>
+      <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 24px;">${post.content}</p>
+      <p style="color: #cbd5e1;">Stay tuned for more updates from the RDS TEAM ecosystem!</p>
+      <button class="btn-outline" style="margin-top: 32px;" onclick="closeModal()">Close</button>
+    `;
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  
+  function closeModal() {
+    const modal = document.getElementById('blogModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  
+  function subscribeNewsletter() {
+    const email = document.getElementById('newsletterEmail').value;
+    const msg = document.getElementById('newsletterMsg');
+    if (email && email.includes('@')) {
+      msg.innerHTML = '<span style="color: #22c55e;"><i class="fas fa-check-circle"></i> Thanks for subscribing!</span>';
+      document.getElementById('newsletterEmail').value = '';
+      setTimeout(() => { msg.innerHTML = ''; }, 3000);
+    } else {
+      msg.innerHTML = '<span style="color: #ef4444;"><i class="fas fa-exclamation-triangle"></i> Please enter a valid email.</span>';
+    }
+  }
+  
+  // Reveal animations
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+  
+  // Mobile menu
+  document.querySelector('.mobile-menu-btn')?.addEventListener('click', () => {
+    alert('Navigation Menu: Home | Divisions | Products | Services | Portfolio | Blog | Contact');
+  });
+  
+  // Form input styles
+  const style = document.createElement('style');
+  style.textContent = `.form-input { width: 100%; padding: 14px 18px; background: rgba(0,0,0,0.4); border: 1px solid rgba(42,109,240,0.3); border-radius: 24px; color: white; } .form-input:focus { outline: none; border-color: #2A6DF0; }`;
+  document.head.appendChild(style);
+</script>
+</body>
+</html>
