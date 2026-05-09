@@ -5,26 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Divisions | RDS TEAM — Complete Ecosystem Breakdown</title>
   <meta name="description" content="Explore RDS TEAM's four core divisions: RDS Group (Retail), RDS Technology (Products & Services), RDS Media (Entertainment), HRF Group (Training & Discipline).">
-  <meta name="keywords" content="RDS Group, RDS Technology, RDS Media, HRF Group, OKmart, ToolTari, OMDEV, training">
   <meta name="theme-color" content="#05070A">
-  <meta name="mobile-web-app-capable" content="yes">
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png">
-  <link rel="apple-touch-icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png">
   
-  <!-- Open Graph -->
-  <meta property="og:title" content="RDS TEAM Divisions — Complete Ecosystem Breakdown">
-  <meta property="og:description" content="Discover how RDS Group, Technology, Media, and HRF Group power the future ecosystem.">
-  <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png">
-  <meta property="og:url" content="https://rdsteam.netlify.app/divisions.html">
-  
-  <!-- Preconnect -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
   <style>
@@ -44,14 +30,13 @@
       background: #05070A;
       color: #EDF2FF;
       overflow-x: hidden;
-      line-height: 1.5;
     }
     
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: #0A0F1A; }
     ::-webkit-scrollbar-thumb { background: #2A6DF0; border-radius: 10px; }
     
-    /* ========== NAVBAR STYLES ========== */
+    /* Navbar */
     .navbar {
       position: fixed;
       top: 0;
@@ -87,11 +72,6 @@
     .logo img {
       height: 38px;
       width: auto;
-      transition: transform 0.3s;
-    }
-    
-    .logo img:hover {
-      transform: scale(1.05);
     }
     
     .logo span {
@@ -158,6 +138,7 @@
       padding: 10px 20px;
       display: block;
       font-size: 0.9rem;
+      text-decoration: none;
     }
     
     .dropdown-content a:hover {
@@ -176,7 +157,6 @@
       color: white;
       background: none;
       border: none;
-      z-index: 1001;
     }
     
     .mobile-menu-overlay {
@@ -266,12 +246,11 @@
       padding: 0 24px;
     }
     
-    /* Hero Section */
+    /* Hero */
     .hero {
       min-height: 60vh;
       display: flex;
       align-items: center;
-      position: relative;
       padding-top: 100px;
     }
     
@@ -297,7 +276,6 @@
       color: transparent;
     }
     
-    /* Buttons */
     .btn-back {
       display: inline-flex;
       align-items: center;
@@ -350,9 +328,20 @@
       box-shadow: 0 20px 35px -15px rgba(42, 109, 240, 0.3);
     }
     
-    /* Division Cards */
-    .division-main-card {
+    /* Division Card */
+    .division-card {
       transition: all 0.4s ease;
+    }
+    
+    /* Expandable Content - WORKING */
+    .expandable-wrapper {
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      max-height: 0;
+    }
+    
+    .expandable-wrapper.show {
+      max-height: 800px;
     }
     
     .tech-grid {
@@ -364,55 +353,68 @@
     
     .sub-item {
       background: rgba(255, 255, 255, 0.05);
-      padding: 8px 12px;
-      border-radius: 20px;
+      padding: 10px 14px;
+      border-radius: 24px;
       font-size: 0.85rem;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+      transition: all 0.3s;
     }
     
-    .expandable-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s cubic-bezier(0.33, 1, 0.68, 1);
-    }
-    
-    .expandable-content.active {
-      max-height: 500px;
+    .sub-item:hover {
+      background: rgba(42, 109, 240, 0.2);
+      transform: translateX(5px);
     }
     
     .expand-toggle {
       background: rgba(42, 109, 240, 0.2);
       border: 1px solid rgba(42, 109, 240, 0.5);
-      padding: 8px 20px;
+      padding: 10px 24px;
       border-radius: 40px;
       cursor: pointer;
       color: #CBD5FF;
       transition: all 0.3s;
       font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
     
     .expand-toggle:hover {
       background: rgba(42, 109, 240, 0.4);
       color: white;
+      transform: scale(1.02);
     }
     
-    /* Ecosystem Connection */
-    .connection-card {
-      background: linear-gradient(135deg, #0A0F1A, #03050A);
-      border-radius: 48px;
-      padding: 48px;
-      text-align: center;
-    }
-    
-    /* Badge */
     .badge {
       background: rgba(42, 109, 240, 0.2);
       padding: 4px 12px;
       border-radius: 40px;
       font-size: 0.7rem;
       display: inline-block;
+    }
+    
+    /* Product Cards */
+    .product-card {
+      background: rgba(34, 197, 94, 0.08);
+      border-radius: 24px;
+      padding: 20px;
+      transition: all 0.3s;
+    }
+    
+    .product-card:hover {
+      background: rgba(34, 197, 94, 0.15);
+      transform: translateY(-3px);
+    }
+    
+    /* Connection Card */
+    .connection-card {
+      background: linear-gradient(135deg, #0A0F1A, #03050A);
+      border-radius: 48px;
+      padding: 48px;
+      text-align: center;
     }
     
     /* Reveal Animation */
@@ -434,7 +436,7 @@
       margin-top: 80px;
     }
     
-    /* Particle Background */
+    /* Particles */
     .particle-bg {
       position: fixed;
       top: 0;
@@ -472,21 +474,18 @@
       
       .container { padding: 0 20px; }
       
-      .sub-item { font-size: 0.75rem; }
       .tech-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+      .sub-item { font-size: 0.75rem; padding: 8px 12px; }
       
       .connection-card { padding: 32px 20px; }
       
-      .expand-toggle { padding: 6px 16px; font-size: 0.85rem; }
+      .expand-toggle { padding: 8px 18px; font-size: 0.85rem; }
     }
     
     @media (max-width: 480px) {
       .hero-title { font-size: 1.6rem; }
-      .hero-badge { font-size: 0.7rem; }
-      
       .glass-card { padding: 24px !important; }
-      
-      .sub-item { padding: 6px 10px; }
+      .product-card { padding: 16px; }
     }
   </style>
 </head>
@@ -563,7 +562,7 @@
   <!-- RDS Group Division -->
   <section style="padding: 40px 0;" id="rds-group">
     <div class="container">
-      <div class="reveal glass-card division-main-card" style="border-left: 5px solid #22c55e; padding: 40px;">
+      <div class="reveal glass-card division-card" style="border-left: 5px solid #22c55e; padding: 40px;">
         <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: space-between;">
           <div>
             <i class="fas fa-store" style="font-size: 3rem; color: #22c55e;"></i>
@@ -574,22 +573,22 @@
         </div>
         <p style="margin-top: 24px; line-height: 1.6;">Revolutionizing retail experience through innovative platforms, smart grocery solutions, and rental ecosystems.</p>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 32px;">
-          <div style="background: rgba(34,197,94,0.1); border-radius: 24px; padding: 20px;">
+          <div class="product-card">
             <i class="fas fa-shopping-cart" style="color: #22c55e; font-size: 1.8rem;"></i>
             <h3 style="font-size: 1.3rem; font-weight: 600; margin: 12px 0;">OKmart</h3>
-            <p>Smart retail & grocery delivery platform</p>
+            <p style="color: #cbd5e1;">Smart retail & grocery delivery platform</p>
             <a href="https://okmart.netlify.app/" target="_blank" style="color: #22c55e; display: inline-block; margin-top: 12px;">Visit →</a>
           </div>
-          <div style="background: rgba(34,197,94,0.1); border-radius: 24px; padding: 20px;">
+          <div class="product-card">
             <i class="fas fa-person-walking" style="color: #22c55e; font-size: 1.8rem;"></i>
             <h3 style="font-size: 1.3rem; font-weight: 600; margin: 12px 0;">Walk-Wise</h3>
-            <p>AI-powered pedestrian & mobility analytics</p>
+            <p style="color: #cbd5e1;">AI-powered pedestrian & mobility analytics</p>
             <span style="color: #aaa; font-size: 0.8rem;">Coming 2026</span>
           </div>
-          <div style="background: rgba(34,197,94,0.1); border-radius: 24px; padding: 20px;">
+          <div class="product-card">
             <i class="fas fa-building" style="color: #22c55e; font-size: 1.8rem;"></i>
             <h3 style="font-size: 1.3rem; font-weight: 600; margin: 12px 0;">RentySide</h3>
-            <p>Rental, booking & real-estate ecosystem</p>
+            <p style="color: #cbd5e1;">Rental, booking & real-estate ecosystem</p>
             <a href="https://rentyside.in/" target="_blank" style="color: #22c55e; display: inline-block; margin-top: 12px;">Explore →</a>
           </div>
         </div>
@@ -597,20 +596,24 @@
     </div>
   </section>
 
-  <!-- RDS Technology Division -->
+  <!-- RDS Technology Division - WITH WORKING EXPAND -->
   <section style="padding: 40px 0;" id="rds-technology">
     <div class="container">
-      <div class="reveal glass-card division-main-card" style="border-left: 5px solid #3b82f6; padding: 40px;">
+      <div class="reveal glass-card division-card" style="border-left: 5px solid #3b82f6; padding: 40px;">
         <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: space-between;">
           <div>
             <i class="fas fa-microchip" style="font-size: 3rem; color: #3b82f6;"></i>
             <h2 style="font-size: 2rem; font-weight: 700; margin-top: 8px;">RDS Technology</h2>
             <p style="color: #cbd5e1;">Product & Service Division</p>
           </div>
-          <button class="expand-toggle" onclick="toggleExpand(this)"><i class="fas fa-chevron-down"></i> View Structure</button>
+          <button class="expand-toggle" onclick="toggleExpand('techExpand')">
+            <i class="fas fa-chevron-down" id="techIcon"></i> View Structure
+          </button>
         </div>
         <p style="margin-top: 24px; line-height: 1.6;">Building the future of software — from enterprise web apps to AI-powered SaaS products and utility platforms.</p>
-        <div class="expandable-content" style="max-height: 0; overflow: hidden;">
+        
+        <!-- Expandable Content -->
+        <div id="techExpand" class="expandable-wrapper" style="max-height: 0;">
           <div style="margin-top: 32px;">
             <h3 style="color: #3b82f6; margin-bottom: 16px;"><i class="fas fa-briefcase"></i> Service Division</h3>
             <div class="tech-grid">
@@ -630,6 +633,7 @@
             </div>
           </div>
         </div>
+        
         <div style="margin-top: 32px;">
           <a href="https://tooltari.in/" target="_blank" class="btn-outline"><i class="fas fa-external-link-alt"></i> Explore ToolTari →</a>
         </div>
@@ -637,20 +641,24 @@
     </div>
   </section>
 
-  <!-- RDS Media Division -->
+  <!-- RDS Media Division - WITH WORKING EXPAND -->
   <section style="padding: 40px 0;" id="rds-media">
     <div class="container">
-      <div class="reveal glass-card division-main-card" style="border-left: 5px solid #f97316; padding: 40px;">
+      <div class="reveal glass-card division-card" style="border-left: 5px solid #f97316; padding: 40px;">
         <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: space-between;">
           <div>
             <i class="fas fa-photo-video" style="font-size: 3rem; color: #f97316;"></i>
             <h2 style="font-size: 2rem; font-weight: 700; margin-top: 8px;">RDS Media</h2>
             <p style="color: #cbd5e1;">Creative & Entertainment Division</p>
           </div>
-          <button class="expand-toggle" onclick="toggleExpand(this)"><i class="fas fa-chevron-down"></i> View Content</button>
+          <button class="expand-toggle" onclick="toggleExpand('mediaExpand')">
+            <i class="fas fa-chevron-down" id="mediaIcon"></i> View Content
+          </button>
         </div>
         <p style="margin-top: 24px; line-height: 1.6;">Creating premium entertainment content across gaming, anime, movies, and digital streaming platforms.</p>
-        <div class="expandable-content" style="max-height: 0; overflow: hidden;">
+        
+        <!-- Expandable Content -->
+        <div id="mediaExpand" class="expandable-wrapper" style="max-height: 0;">
           <div class="tech-grid" style="margin-top: 32px;">
             <div class="sub-item"><i class="fas fa-gamepad"></i> Gaming Channel</div>
             <div class="sub-item"><i class="fas fa-film"></i> OMDEV Platform</div>
@@ -663,20 +671,24 @@
     </div>
   </section>
 
-  <!-- HRF Group Division -->
+  <!-- HRF Group Division - WITH WORKING EXPAND -->
   <section style="padding: 40px 0 80px;" id="hrf-group">
     <div class="container">
-      <div class="reveal glass-card division-main-card" style="border-left: 5px solid #a855f7; padding: 40px;">
+      <div class="reveal glass-card division-card" style="border-left: 5px solid #a855f7; padding: 40px;">
         <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: space-between;">
           <div>
             <i class="fas fa-hand-fist" style="font-size: 3rem; color: #a855f7;"></i>
             <h2 style="font-size: 2rem; font-weight: 700; margin-top: 8px;">HRF Group</h2>
             <p style="color: #cbd5e1;">Training & Discipline Division</p>
           </div>
-          <button class="expand-toggle" onclick="toggleExpand(this)"><i class="fas fa-chevron-down"></i> View Programs</button>
+          <button class="expand-toggle" onclick="toggleExpand('hrfExpand')">
+            <i class="fas fa-chevron-down" id="hrfIcon"></i> View Programs
+          </button>
         </div>
         <p style="margin-top: 24px; line-height: 1.6;">Empowering individuals through leadership training, physical discipline, emergency response, and community service.</p>
-        <div class="expandable-content" style="max-height: 0; overflow: hidden;">
+        
+        <!-- Expandable Content -->
+        <div id="hrfExpand" class="expandable-wrapper" style="max-height: 0;">
           <div class="tech-grid" style="margin-top: 32px;">
             <div class="sub-item"><i class="fas fa-dumbbell"></i> Physical Training</div>
             <div class="sub-item"><i class="fas fa-chalkboard-user"></i> Leadership Programs</div>
@@ -689,7 +701,7 @@
     </div>
   </section>
 
-  <!-- Ecosystem Connection Visual -->
+  <!-- Ecosystem Connection -->
   <section style="padding: 40px 0 80px;">
     <div class="container">
       <div class="reveal connection-card">
@@ -776,26 +788,35 @@
     }
   });
   
-  // Expandable toggle function
-  window.toggleExpand = function(btn) {
-    const card = btn.closest('.glass-card');
-    const content = card.querySelector('.expandable-content');
-    const icon = btn.querySelector('i');
-    if(content.classList.contains('active')) {
-      content.classList.remove('active');
-      icon.classList.remove('fa-chevron-up');
-      icon.classList.add('fa-chevron-down');
+  // WORKING Expand/Collapse Function
+  function toggleExpand(id) {
+    const element = document.getElementById(id);
+    const iconId = id === 'techExpand' ? 'techIcon' : (id === 'mediaExpand' ? 'mediaIcon' : 'hrfIcon');
+    const icon = document.getElementById(iconId);
+    
+    if (element.classList.contains('show')) {
+      element.classList.remove('show');
+      element.style.maxHeight = '0';
+      if (icon) {
+        icon.classList.remove('fa-chevron-up');
+        icon.classList.add('fa-chevron-down');
+      }
     } else {
-      content.classList.add('active');
-      icon.classList.remove('fa-chevron-down');
-      icon.classList.add('fa-chevron-up');
+      element.classList.add('show');
+      element.style.maxHeight = element.scrollHeight + 'px';
+      if (icon) {
+        icon.classList.remove('fa-chevron-down');
+        icon.classList.add('fa-chevron-up');
+      }
     }
   }
   
   // Reveal animations
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('active'); });
+    entries.forEach(entry => { 
+      if(entry.isIntersecting) entry.target.classList.add('active'); 
+    });
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
   
