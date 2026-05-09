@@ -3,65 +3,303 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Products & Platforms | RDS TEAM Ecosystem</title>
+  <title>Products | RDS TEAM — Innovative Platforms & Tools</title>
   <meta name="description" content="Discover RDS TEAM's innovative products: ToolTari, OKmart, RentySide, OMDEV, and upcoming AI platforms & SaaS tools.">
   <meta name="keywords" content="ToolTari, OKmart, RentySide, OMDEV, RDS products, SaaS, AI platforms, utility tools">
+  <meta name="theme-color" content="#05070A">
   
-  <!-- Open Graph -->
-  <meta property="og:title" content="RDS TEAM Products — Innovative Platforms & Tools">
-  <meta property="og:description" content="Explore our ecosystem of retail platforms, utility tools, media streaming, and future AI solutions.">
-  <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png">
-  <meta property="og:url" content="https://rdsteam.netlify.app/products.html">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png">
   
-  <link rel="canonical" href="https://rdsteam.netlify.app/products.html">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-   <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png">
+  
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+    
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+    
     body {
       font-family: 'Inter', sans-serif;
       background: #05070A;
       color: #EDF2FF;
       overflow-x: hidden;
     }
+    
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: #0A0F1A; }
     ::-webkit-scrollbar-thumb { background: #2A6DF0; border-radius: 10px; }
     
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      backdrop-filter: blur(16px);
+      background: rgba(5, 7, 10, 0.85);
+      border-bottom: 1px solid rgba(42, 109, 240, 0.2);
+      transition: all 0.3s ease;
     }
-    .reveal.active { opacity: 1; transform: translateY(0); }
     
-    .glass-card {
-      background: rgba(10, 20, 35, 0.55);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(42, 109, 240, 0.2);
-      border-radius: 32px;
-      transition: all 0.4s ease;
+    .navbar.scrolled {
+      background: rgba(5, 7, 10, 0.95);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
-    .glass-card:hover {
-      border-color: rgba(42, 109, 240, 0.6);
-      transform: translateY(-6px);
-      box-shadow: 0 20px 35px -15px rgba(42, 109, 240, 0.3);
+    
+    .navbar-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .logo img {
+      height: 38px;
+      width: auto;
+    }
+    
+    .logo span {
+      font-weight: 800;
+      font-size: 1.3rem;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+    
+    .nav-links a {
+      color: #D1D9FF;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #2A6DF0;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropbtn {
+      background: transparent;
+      color: #D1D9FF;
+      border: none;
+      font-weight: 500;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .dropbtn:hover {
+      color: #2A6DF0;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 35px;
+      right: 0;
+      background: rgba(10, 20, 35, 0.95);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(42, 109, 240, 0.3);
+      border-radius: 16px;
+      min-width: 140px;
+      z-index: 200;
+      padding: 8px 0;
+    }
+    
+    .dropdown-content a {
+      color: #D1D9FF;
+      padding: 10px 20px;
+      display: block;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    
+    .dropdown-content a:hover {
+      background: rgba(42, 109, 240, 0.2);
+      color: #2A6DF0;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+      background: none;
+      border: none;
+    }
+    
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(5, 7, 10, 0.98);
+      backdrop-filter: blur(20px);
+      z-index: 2000;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .mobile-menu-overlay.active {
+      transform: translateX(0);
+    }
+    
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      border-bottom: 1px solid rgba(42, 109, 240, 0.2);
+    }
+    
+    .mobile-menu-header .logo-text {
+      font-size: 1.3rem;
+      font-weight: 800;
+    }
+    
+    .mobile-menu-close {
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+      background: none;
+      border: none;
+    }
+    
+    .mobile-menu-links {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 24px;
+      gap: 8px;
+    }
+    
+    .mobile-menu-links a {
+      color: #D1D9FF;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 500;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .mobile-menu-links a i {
+      width: 28px;
+      font-size: 1.2rem;
+      color: #2A6DF0;
+    }
+    
+    .mobile-menu-links a:hover {
+      color: #2A6DF0;
+      padding-left: 10px;
+    }
+    
+    .mobile-menu-footer {
+      margin-top: auto;
+      padding: 24px;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 0.75rem;
+      color: #6b7280;
+    }
+    
+    /* Container */
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    /* Hero */
+    .hero {
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      padding-top: 100px;
+    }
+    
+    .hero-badge {
+      background: rgba(42, 109, 240, 0.2);
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      display: inline-block;
+    }
+    
+    .hero-title {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-top: 28px;
+      line-height: 1.2;
+    }
+    
+    .glow-text {
+      background: linear-gradient(135deg, #FFF, #8B5CF6, #2A6DF0);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #2A6DF0;
+      text-decoration: none;
+      margin-bottom: 24px;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    
+    .btn-back:hover {
+      gap: 12px;
+      color: #8B5CF6;
     }
     
     .btn-primary {
       background: linear-gradient(135deg, #2A6DF0, #8B5CF6);
-      padding: 12px 32px;
+      padding: 12px 28px;
       border-radius: 40px;
       font-weight: 600;
       color: white;
       transition: all 0.3s ease;
-      box-shadow: 0 8px 20px rgba(42, 109, 240, 0.3);
       cursor: pointer;
       display: inline-flex;
       align-items: center;
@@ -69,10 +307,12 @@
       border: none;
       text-decoration: none;
     }
+    
     .btn-primary:hover {
       transform: scale(1.03);
-      box-shadow: 0 12px 28px rgba(42, 109, 240, 0.5);
+      box-shadow: 0 12px 28px rgba(42, 109, 240, 0.4);
     }
+    
     .btn-outline {
       background: transparent;
       border: 1.5px solid rgba(42, 109, 240, 0.7);
@@ -87,107 +327,267 @@
       gap: 8px;
       text-decoration: none;
     }
+    
     .btn-outline:hover {
       border-color: #2A6DF0;
       background: rgba(42, 109, 240, 0.1);
       color: white;
     }
     
-    .container {
-      max-width: 1300px;
-      margin: 0 auto;
-      padding: 0 24px;
+    /* Glass Card */
+    .glass-card {
+      background: rgba(10, 20, 35, 0.55);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(42, 109, 240, 0.2);
+      border-radius: 32px;
+      transition: all 0.4s ease;
     }
     
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(16px);
-      background: rgba(5, 7, 10, 0.75);
-      border-bottom: 1px solid rgba(42, 109, 240, 0.2);
+    .glass-card:hover {
+      border-color: rgba(42, 109, 240, 0.6);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 35px -15px rgba(42, 109, 240, 0.3);
     }
     
+    /* Product Card */
     .product-card {
       background: rgba(12, 20, 35, 0.6);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(66, 153, 225, 0.15);
-      border-radius: 32px;
+      border-radius: 28px;
       transition: all 0.4s ease;
       overflow: hidden;
     }
+    
     .product-card:hover {
       border-color: rgba(42, 109, 240, 0.5);
       transform: translateY(-6px);
       box-shadow: 0 20px 35px -15px rgba(42, 109, 240, 0.3);
     }
     
-    .status-live { background: #22c55e20; color: #22c55e; padding: 4px 12px; border-radius: 40px; font-size: 0.7rem; font-weight: 600; }
-    .status-beta { background: #f9731620; color: #f97316; padding: 4px 12px; border-radius: 40px; font-size: 0.7rem; font-weight: 600; }
-    .status-soon { background: #8B5CF620; color: #8B5CF6; padding: 4px 12px; border-radius: 40px; font-size: 0.7rem; font-weight: 600; }
-    
-    @media (max-width: 768px) {
-      .container { padding: 0 20px; }
-      .nav-links { display: none; }
-      .mobile-menu-btn { display: block; }
-    }
-    .mobile-menu-btn { display: none; font-size: 1.8rem; cursor: pointer; }
-    
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: #2A6DF0;
-      text-decoration: none;
-      margin-bottom: 24px;
-      font-weight: 500;
-      transition: 0.2s;
-    }
-    .back-link:hover { gap: 12px; color: #8B5CF6; }
-    
-    .badge {
-      background: rgba(42,109,240,0.2);
+    .status-live {
+      background: #22c55e20;
+      color: #22c55e;
       padding: 4px 12px;
       border-radius: 40px;
       font-size: 0.7rem;
+      font-weight: 600;
+      display: inline-block;
+    }
+    
+    .status-beta {
+      background: #f9731620;
+      color: #f97316;
+      padding: 4px 12px;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      display: inline-block;
+    }
+    
+    .status-soon {
+      background: #8B5CF620;
+      color: #8B5CF6;
+      padding: 4px 12px;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      display: inline-block;
+    }
+    
+    .badge {
+      background: rgba(42, 109, 240, 0.2);
+      padding: 4px 12px;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      display: inline-block;
+    }
+    
+    /* Expandable for Future Products */
+    .expandable-wrapper {
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      max-height: 0;
+    }
+    
+    .expandable-wrapper.show {
+      max-height: 800px;
+    }
+    
+    .expand-toggle {
+      background: rgba(42, 109, 240, 0.2);
+      border: 1px solid rgba(42, 109, 240, 0.5);
+      padding: 10px 24px;
+      border-radius: 40px;
+      cursor: pointer;
+      color: #CBD5FF;
+      transition: all 0.3s;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .expand-toggle:hover {
+      background: rgba(42, 109, 240, 0.4);
+      color: white;
+    }
+    
+    .future-item {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 12px 16px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.3s;
+    }
+    
+    .future-item:hover {
+      background: rgba(42, 109, 240, 0.15);
+      transform: translateX(5px);
+    }
+    
+    /* Reveal Animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+    
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Footer */
+    .footer {
+      border-top: 1px solid #1E2A3A;
+      padding: 50px 0 40px;
+      margin-top: 80px;
+    }
+    
+    /* Particles */
+    .particle-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    
+    .particle {
+      position: absolute;
+      background: rgba(42, 109, 240, 0.25);
+      border-radius: 50%;
+      filter: blur(3px);
+      animation: floatParticle 18s infinite alternate ease-in-out;
+    }
+    
+    @keyframes floatParticle {
+      0% { transform: translate(0, 0) scale(1); opacity: 0.2; }
+      100% { transform: translate(30px, -25px) scale(1.2); opacity: 0.6; }
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero-title { font-size: 2.5rem; }
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: block; }
+      
+      .hero { padding-top: 120px; min-height: auto; }
+      .hero-title { font-size: 1.8rem; }
+      
+      .container { padding: 0 20px; }
+      
+      .product-card { margin-bottom: 0; }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-title { font-size: 1.5rem; }
+      .glass-card { padding: 24px !important; }
+      .btn-primary, .btn-outline { padding: 10px 20px; font-size: 0.85rem; }
     }
   </style>
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 16px 24px;">
-    <div style="display: flex; align-items: center; gap: 12px;">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png" alt="Logo" style="height: 38px;">
-      <span style="font-weight: 800; font-size: 1.3rem;">RDS TEAM</span>
+<div class="particle-bg" id="particleContainer"></div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+  <div class="navbar-container">
+    <div class="logo">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiccpmbqJEMUgbfng4bpTTccxRsQa5H5q4KRMUeOInbJoXRsgvId8HsYxuy16xxTvIGErRlX9X4agH6NVPoOTFX8cbQfrXrR5tmrfkpOOB-yHbdgtX_CWqTMllEifxWRs7zB6EpbZESjN2hYpADMbu2P25GILPGlUJ9Ah8zeyBET1NmFSv1qboUeouO/s1280/Untitled-PhotoRoom.png-PhotoRoom%20(1).png" alt="RDS TEAM Logo">
+      <span>RDS TEAM</span>
     </div>
-    <div class="nav-links" style="display: flex; gap: 32px;">
-      <a href="index.html" style="color: #D1D9FF; text-decoration: none;">Home</a>
-      <a href="divisions.html" style="color: #D1D9FF; text-decoration: none;">Divisions</a>
-      <a href="products.html" style="color: #2A6DF0; text-decoration: none;">Products</a>
-      <a href="services.html" style="color: #D1D9FF; text-decoration: none;">Services</a>
-      <a href="portfolio.html" style="color: #D1D9FF; text-decoration: none;">Portfolio</a>
-      <a href="contact.html" style="color: #D1D9FF; text-decoration: none;">Contact</a>
+    
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="divisions.html">Divisions</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <div class="dropdown">
+        <button class="dropbtn">More <i class="fas fa-chevron-down"></i></button>
+        <div class="dropdown-content">
+          <a href="blog.html">Blog</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
     </div>
-    <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
+    
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <i class="fas fa-bars"></i>
+    </button>
   </div>
 </nav>
 
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay" id="mobileMenuOverlay">
+  <div class="mobile-menu-header">
+    <span class="logo-text">RDS TEAM</span>
+    <button class="mobile-menu-close" id="closeMenuBtn">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="mobile-menu-links">
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="divisions.html"><i class="fas fa-layer-group"></i> Divisions</a>
+    <a href="products.html"><i class="fas fa-cube"></i> Products</a>
+    <a href="services.html"><i class="fas fa-cogs"></i> Services</a>
+    <a href="portfolio.html"><i class="fas fa-briefcase"></i> Portfolio</a>
+    <a href="blog.html"><i class="fas fa-newspaper"></i> Blog</a>
+    <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+    <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+  </div>
+  <div class="mobile-menu-footer">
+    <p>© 2025 RDS TEAM — Ecosystem Hub</p>
+  </div>
+</div>
+
 <main>
   <!-- Hero Section -->
-  <section style="padding: 80px 0 60px;">
+  <section class="hero">
     <div class="container">
-      <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+      <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
       <div class="reveal" style="text-align: center; max-width: 800px; margin: 0 auto;">
-        <span class="badge"><i class="fas fa-cube"></i> Our Ecosystem</span>
-        <h1 style="font-size: 3.5rem; font-weight: 800; margin-top: 24px; background: linear-gradient(135deg, #FFF, #8B5CF6, #2A6DF0); background-clip: text; -webkit-background-clip: text; color: transparent;">Products & Platforms</h1>
-        <p style="color: #9ca3af; margin-top: 20px; font-size: 1.2rem;">From retail solutions to AI-powered tools — explore the complete RDS product ecosystem.</p>
+        <span class="hero-badge"><i class="fas fa-cube"></i> Our Ecosystem</span>
+        <h1 class="hero-title">Products & <span class="glow-text">Platforms</span></h1>
+        <p style="color: #9ca3af; margin-top: 20px; font-size: 1.1rem;">From retail solutions to AI-powered tools — explore the complete RDS product ecosystem.</p>
       </div>
     </div>
   </section>
 
   <!-- Live Products Section -->
-  <section style="padding: 40px 0;">
+  <section style="padding: 60px 0 40px;">
     <div class="container">
       <div class="reveal" style="margin-bottom: 40px;">
         <h2 style="font-size: 1.8rem; font-weight: 700;"><i class="fas fa-circle" style="color: #22c55e; font-size: 0.8rem;"></i> Live & Active</h2>
@@ -197,9 +597,9 @@
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px;">
         <!-- ToolTari Card -->
         <div class="product-card reveal" style="padding: 32px;">
-          <div style="display: flex; justify-content: space-between; align-items: start;">
+          <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; gap: 10px;">
             <i class="fas fa-toolbox" style="font-size: 3rem; color: #3b82f6;"></i>
-            <span class="status-live"><i class="fas fa-check-circle"></i> Live</span>
+            <span class="status-live"><i class="fas fa-circle"></i> Live</span>
           </div>
           <h3 style="font-size: 1.8rem; font-weight: 700; margin-top: 16px;">ToolTari</h3>
           <p style="color: #cbd5e1; margin: 12px 0;">Utility ecosystem with productivity tools, SaaS applications, and developer utilities.</p>
@@ -208,7 +608,7 @@
             <span class="badge">Node.js</span>
             <span class="badge">SaaS</span>
           </div>
-          <div style="display: flex; gap: 12px; margin-top: 20px;">
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
             <a href="https://tooltari.in/" target="_blank" class="btn-primary" style="padding: 8px 20px; font-size: 0.9rem;"><i class="fas fa-external-link-alt"></i> Main Site</a>
             <a href="https://tooltari.netlify.app/" target="_blank" class="btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">Alternate</a>
           </div>
@@ -216,9 +616,9 @@
         
         <!-- OKmart Card -->
         <div class="product-card reveal" style="padding: 32px;">
-          <div style="display: flex; justify-content: space-between; align-items: start;">
+          <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; gap: 10px;">
             <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjqUODVL4iyLalUMIzsfwPSpjOSA_8OEz7zn7WiCOxVySl8TqcLxulYNt7tBT9C85tto_EoafNkIMbgV1AMPkOJjkeZ52VLY5PR02z06GFwwFPb9WQBAun4WHcd3JB2Heky3Q2WdDGPy8DGZn7suo0_8RdY7Wd7i7wTMA4osYIiL6NZ1CbuPJHGzmeX" style="height: 50px;" alt="OKmart">
-            <span class="status-live"><i class="fas fa-check-circle"></i> Live</span>
+            <span class="status-live"><i class="fas fa-circle"></i> Live</span>
           </div>
           <h3 style="font-size: 1.8rem; font-weight: 700; margin-top: 16px;">OKmart</h3>
           <p style="color: #cbd5e1; margin: 12px 0;">Smart retail & grocery delivery platform with seamless shopping experience.</p>
@@ -226,14 +626,14 @@
             <span class="badge">E-commerce</span>
             <span class="badge">Retail Tech</span>
           </div>
-          <a href="https://okmart.netlify.app/" target="_blank" class="btn-primary" style="padding: 8px 20px; font-size: 0.9rem; margin-top: 12px; display: inline-block;"><i class="fas fa-store"></i> Visit OKmart</a>
+          <a href="https://okmart.netlify.app/" target="_blank" class="btn-primary" style="padding: 8px 20px; font-size: 0.9rem; display: inline-block;"><i class="fas fa-store"></i> Visit OKmart</a>
         </div>
         
         <!-- RentySide Card -->
         <div class="product-card reveal" style="padding: 32px;">
-          <div style="display: flex; justify-content: space-between; align-items: start;">
+          <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; gap: 10px;">
             <img src="https://rentyside.kesug.com/wp-content/uploads/2025/12/cropped-rentyside.png" style="height: 45px;" alt="RentySide">
-            <span class="status-live"><i class="fas fa-check-circle"></i> Live</span>
+            <span class="status-live"><i class="fas fa-circle"></i> Live</span>
           </div>
           <h3 style="font-size: 1.8rem; font-weight: 700; margin-top: 16px;">RentySide</h3>
           <p style="color: #cbd5e1; margin: 12px 0;">Rental, booking & real-estate ecosystem with Walk-Wise integration.</p>
@@ -241,7 +641,7 @@
             <span class="badge">Real Estate</span>
             <span class="badge">Rental</span>
           </div>
-          <a href="https://rentyside.in/" target="_blank" class="btn-primary" style="padding: 8px 20px; font-size: 0.9rem; margin-top: 12px; display: inline-block;"><i class="fas fa-building"></i> Explore</a>
+          <a href="https://rentyside.in/" target="_blank" class="btn-primary" style="padding: 8px 20px; font-size: 0.9rem; display: inline-block;"><i class="fas fa-building"></i> Explore</a>
         </div>
       </div>
     </div>
@@ -259,48 +659,59 @@
         <div class="glass-card reveal" style="padding: 28px; text-align: center;">
           <i class="fas fa-film" style="font-size: 3rem; color: #f97316;"></i>
           <h3 style="font-size: 1.5rem; font-weight: 700; margin: 16px 0;">OMDEV</h3>
-          <p>Streaming & news platform for gaming, anime, and entertainment content.</p>
+          <p style="color: #cbd5e1;">Streaming & news platform for gaming, anime, and entertainment content.</p>
           <span class="status-beta" style="display: inline-block; margin-top: 16px;">Beta 2026</span>
         </div>
         
         <div class="glass-card reveal" style="padding: 28px; text-align: center;">
           <i class="fas fa-robot" style="font-size: 3rem; color: #8B5CF6;"></i>
           <h3 style="font-size: 1.5rem; font-weight: 700; margin: 16px 0;">RDS AI</h3>
-          <p>Intelligent AI platforms, analytics suites, and automation tools.</p>
+          <p style="color: #cbd5e1;">Intelligent AI platforms, analytics suites, and automation tools.</p>
           <span class="status-soon" style="display: inline-block; margin-top: 16px;">Q3 2026</span>
         </div>
         
         <div class="glass-card reveal" style="padding: 28px; text-align: center;">
           <i class="fas fa-cloud-arrow-up" style="font-size: 3rem; color: #06b6d4;"></i>
           <h3 style="font-size: 1.5rem; font-weight: 700; margin: 16px 0;">RDS Cloud</h3>
-          <p>Scalable cloud infrastructure and delivery network solutions.</p>
+          <p style="color: #cbd5e1;">Scalable cloud infrastructure and delivery network solutions.</p>
           <span class="status-soon" style="display: inline-block; margin-top: 16px;">2026</span>
         </div>
         
         <div class="glass-card reveal" style="padding: 28px; text-align: center;">
           <i class="fas fa-truck-fast" style="font-size: 3rem; color: #22c55e;"></i>
           <h3 style="font-size: 1.5rem; font-weight: 700; margin: 16px 0;">RDS Logistics</h3>
-          <p>Smart delivery network and supply chain management.</p>
+          <p style="color: #cbd5e1;">Smart delivery network and supply chain management.</p>
           <span class="status-soon" style="display: inline-block; margin-top: 16px;">2027</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Future SaaS Products -->
+  <!-- Future SaaS Products - Expandable Section -->
   <section style="padding: 60px 0 80px;">
     <div class="container">
       <div class="reveal" style="background: linear-gradient(135deg, #0A0F1A, #03050A); border-radius: 48px; padding: 48px; text-align: center;">
         <i class="fas fa-chart-line" style="font-size: 3rem; color: #2A6DF0; margin-bottom: 20px;"></i>
-        <h2 style="font-size: 2rem; font-weight: 700;">Future SaaS Portfolio</h2>
+        <h2 style="font-size: 1.8rem; font-weight: 700;">Future SaaS Portfolio</h2>
         <p style="color: #9ca3af; max-width: 600px; margin: 16px auto;">Building a complete suite of B2B and B2C SaaS products</p>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 32px;">
-          <span class="badge" style="background: #3b82f620;">AI Analytics</span>
-          <span class="badge" style="background: #3b82f620;">CRM Platform</span>
-          <span class="badge" style="background: #3b82f620;">Marketing Automation</span>
-          <span class="badge" style="background: #3b82f620;">DevOps Tools</span>
-          <span class="badge" style="background: #3b82f620;">HR Management</span>
+        
+        <button class="expand-toggle" onclick="toggleSaaSExpand()" style="margin: 20px auto;">
+          <i class="fas fa-chevron-down" id="saasIcon"></i> View All Upcoming Products
+        </button>
+        
+        <div id="saasExpand" class="expandable-wrapper" style="max-height: 0; text-align: left; margin-top: 0;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-top: 32px;">
+            <div class="future-item"><i class="fas fa-chart-pie" style="color: #2A6DF0;"></i> AI Analytics Platform</div>
+            <div class="future-item"><i class="fas fa-users" style="color: #8B5CF6;"></i> CRM Platform</div>
+            <div class="future-item"><i class="fas fa-envelope" style="color: #f97316;"></i> Marketing Automation</div>
+            <div class="future-item"><i class="fas fa-code-branch" style="color: #22c55e;"></i> DevOps Tools</div>
+            <div class="future-item"><i class="fas fa-user-tie" style="color: #a855f7;"></i> HR Management</div>
+            <div class="future-item"><i class="fas fa-file-invoice" style="color: #06b6d4;"></i> Invoice & Billing</div>
+            <div class="future-item"><i class="fas fa-headset" style="color: #ec4899;"></i> Customer Support</div>
+            <div class="future-item"><i class="fas fa-project-diagram" style="color: #2A6DF0;"></i> Project Management</div>
+          </div>
         </div>
+        
         <div style="margin-top: 32px;">
           <a href="contact.html" class="btn-primary"><i class="fas fa-envelope"></i> Get Early Access</a>
         </div>
@@ -310,7 +721,7 @@
 </main>
 
 <!-- Footer -->
-<footer style="border-top: 1px solid #1E2A3A; padding: 50px 0 40px;">
+<footer class="footer">
   <div class="container">
     <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
       <div>
@@ -323,34 +734,76 @@
             <li><a href="index.html" style="color: #9ca3af; text-decoration: none;">Home</a></li>
             <li><a href="divisions.html" style="color: #9ca3af; text-decoration: none;">Divisions</a></li>
             <li><a href="products.html" style="color: #2A6DF0; text-decoration: none;">Products</a></li>
-            <li><a href="contact.html" style="color: #9ca3af; text-decoration: none;">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h4 style="font-weight: 700;">Products</h4>
+          <h4 style="font-weight: 700;">Resources</h4>
           <ul style="margin-top: 12px; line-height: 1.8; list-style: none;">
-            <li><a href="https://tooltari.in/" target="_blank" style="color: #9ca3af; text-decoration: none;">ToolTari</a></li>
-            <li><a href="https://okmart.netlify.app/" target="_blank" style="color: #9ca3af; text-decoration: none;">OKmart</a></li>
-            <li><a href="https://rentyside.in/" target="_blank" style="color: #9ca3af; text-decoration: none;">RentySide</a></li>
+            <li><a href="portfolio.html" style="color: #9ca3af; text-decoration: none;">Portfolio</a></li>
+            <li><a href="blog.html" style="color: #9ca3af; text-decoration: none;">Blog</a></li>
+            <li><a href="contact.html" style="color: #9ca3af; text-decoration: none;">Contact</a></li>
           </ul>
         </div>
         <div>
           <h4 style="font-weight: 700;">Legal</h4>
           <ul style="margin-top: 12px; line-height: 1.8; list-style: none;">
-            <li><a href="#" style="color: #9ca3af; text-decoration: none;">Privacy Policy</a></li>
-            <li><a href="#" style="color: #9ca3af; text-decoration: none;">Terms & Conditions</a></li>
-            <li><a href="#" style="color: #9ca3af; text-decoration: none;">Disclaimer</a></li>
+            <li><a href="privacy.html" style="color: #9ca3af; text-decoration: none;">Privacy</a></li>
+            <li><a href="terms.html" style="color: #9ca3af; text-decoration: none;">Terms</a></li>
+            <li><a href="disclaimer.html" style="color: #9ca3af; text-decoration: none;">Disclaimer</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid #1f2937; text-align: center; font-size: 0.75rem; color: #6b7280;">
-      © 2025 RDS TEAM — Ecosystem Hub. Built for scalability. | <a href="index.html" style="color: #6b7280;">rdsteam.netlify.app</a>
+      © 2025 RDS TEAM — Ecosystem Hub. Built for scalability. | rdsteam.netlify.app
     </div>
   </div>
 </footer>
 
 <script>
+  // Particles
+  const particleContainer = document.getElementById('particleContainer');
+  for(let i = 0; i < 50; i++) {
+    let p = document.createElement('div');
+    p.classList.add('particle');
+    let size = Math.random() * 8 + 2;
+    p.style.width = size + 'px';
+    p.style.height = size + 'px';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.top = Math.random() * 100 + '%';
+    p.style.animationDelay = Math.random() * 20 + 's';
+    p.style.animationDuration = 15 + Math.random() * 25 + 's';
+    particleContainer.appendChild(p);
+  }
+  
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+  
+  // Expand/Collapse for SaaS Products
+  function toggleSaaSExpand() {
+    const element = document.getElementById('saasExpand');
+    const icon = document.getElementById('saasIcon');
+    
+    if (element.classList.contains('show')) {
+      element.classList.remove('show');
+      element.style.maxHeight = '0';
+      icon.classList.remove('fa-chevron-up');
+      icon.classList.add('fa-chevron-down');
+    } else {
+      element.classList.add('show');
+      element.style.maxHeight = element.scrollHeight + 'px';
+      icon.classList.remove('fa-chevron-down');
+      icon.classList.add('fa-chevron-up');
+    }
+  }
+  
   // Reveal animations
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
@@ -360,10 +813,37 @@
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
   
-  // Mobile menu
-  document.querySelector('.mobile-menu-btn')?.addEventListener('click', () => {
-    alert('Navigation Menu: Home | Divisions | Products | Services | Portfolio | Contact');
-  });
+  // Mobile Menu
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+  const closeMenuBtn = document.getElementById('closeMenuBtn');
+  
+  if(mobileMenuBtn && mobileMenuOverlay) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenuOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+    
+    closeMenuBtn.addEventListener('click', () => {
+      mobileMenuOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+    
+    const mobileLinks = document.querySelectorAll('.mobile-menu-links a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+    
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
+        mobileMenuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
 </script>
 </body>
 </html>
